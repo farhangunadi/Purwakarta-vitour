@@ -39,7 +39,7 @@ export default function Home() {
         />
         <PintuMasuk />
         <Vegetation />
-        <Sky sunPosition={[0, 10, 0]} azimuth={0.25} inclination={0} />
+        <Sky sunPosition={[0, 10, 0]} azimuth={0.25} inclination={10} />
         <Environment files="./environment/studio_garden_2k.hdr" />
       </BaseScene>
       <div className={styles.dot}></div>

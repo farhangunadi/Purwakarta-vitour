@@ -1,5 +1,8 @@
 import React from "react";
+import { Bookcase } from "../../Basic Compt/Bookcase";
 import { Box } from "../../Basic Compt/Box";
+import { PalmTree } from "../../Basic Compt/Palm-tree";
+import { ShortPalmTree } from "../../Basic Compt/Short-palm-tree";
 import { TreeLowPoly } from "../../Basic Compt/Tree_lowpoly";
 import { Gedung1 } from "../Gedung/Gedung1";
 import { Gedung2 } from "../Gedung/Gedung2";
@@ -83,6 +86,84 @@ export const Vegetation = () => {
           scale={4}
           position={[90, -0.2, 40]}
           rotation={[0, Math.PI, 0]}
+        />
+      </group>
+      <group>
+        <PalmTree scale={2} position={[110, -0.1, -6]} />
+        <ShortPalmTree
+          scale={1.8}
+          rotation={[0, Math.PI / 2, 0]}
+          position={[105, -0.1, -6]}
+        />
+        <PalmTree scale={2.3} position={[102, -0.2, -6]} />
+        <PalmTree scale={2} position={[110, -0.1, 5.5]} />
+        <ShortPalmTree
+          scale={1.8}
+          rotation={[0, Math.PI / 2, 0]}
+          position={[105, -0.1, 5.5]}
+        />
+        <PalmTree scale={2.3} position={[102, -0.2, 5.5]} />
+      </group>
+      <group>
+        <Bookcase
+          scale={1.3}
+          rotation={[0, Math.PI / 2, 0]}
+          position={[92.5, 0, 7]}
+        />
+        <Bookcase
+          scale={1.3}
+          rotation={[0, Math.PI / 2, 0]}
+          position={[92.5, 0, 4.5]}
+        />
+        <Bookcase
+          scale={1.3}
+          rotation={[0, Math.PI / 2, 0]}
+          position={[92.5, 2.5, 7]}
+        />
+        <Bookcase
+          scale={1.3}
+          rotation={[0, Math.PI / 2, 0]}
+          position={[92.5, 2.5, 4.5]}
+        />
+        <Bookcase
+          scale={1.3}
+          rotation={[0, Math.PI, 0]}
+          position={[95, 0, 8]}
+        />
+        <Bookcase
+          scale={1.3}
+          rotation={[0, Math.PI, 0]}
+          position={[97.5, 0, 8]}
+        />
+        <Bookcase
+          scale={1.3}
+          rotation={[0, Math.PI, 0]}
+          position={[95, 2.5, 8]}
+        />
+        <Bookcase
+          scale={1.3}
+          rotation={[0, Math.PI, 0]}
+          position={[97.5, 2.5, 8]}
+        />
+        <Bookcase
+          scale={1.3}
+          rotation={[0, Math.PI / 2, 0]}
+          position={[92.5, 0, -7]}
+        />
+        <Bookcase
+          scale={1.3}
+          rotation={[0, Math.PI / 2, 0]}
+          position={[92.5, 0, -5]}
+        />
+        <Bookcase
+          scale={1.3}
+          rotation={[0, Math.PI / 2, 0]}
+          position={[92.5, 2.5, -7]}
+        />
+        <Bookcase
+          scale={1.3}
+          rotation={[0, Math.PI / 2, 0]}
+          position={[92.5, 2.5, -5]}
         />
       </group>
     </group>

@@ -17,6 +17,7 @@ export const BaseScene = ({ children }) => {
           {children}
           <Floor rotation={[Math.PI / -2, 0, 0]} color="#28822e" />
         </Physics>
+        <BakeShadows />
         <PointerLockControls />
         {/* <gridHelper /> */}
       </Canvas>
