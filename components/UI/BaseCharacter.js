@@ -31,7 +31,6 @@ export const BaseCharacter = (props) => {
   }, []);
   useFrame((state) => {
     ref.current.getWorldPosition(camera.position);
-    console.log(camera.position);
     frontVector.set(0, 0, Number(backward) - Number(forward));
     sideVector.set(Number(left) - Number(right), 0, 0);
     direction

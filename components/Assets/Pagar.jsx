@@ -10,9 +10,6 @@ export function Pagar(props) {
     position: props.position,
     scale: props.scale,
     rotation: props.rotation,
-    onCollide: (e) => {
-      console.log(e);
-    },
     ...props,
   }));
   const { nodes, materials } = useGLTF("./models/pagar.glb");

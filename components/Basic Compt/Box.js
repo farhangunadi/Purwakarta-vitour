@@ -5,7 +5,6 @@ export const Box = ({ ...props }) => {
   const [ref] = useBox((index) => ({
     type: "Static",
     mass: 1,
-    args: [0.1, 0, 0.1],
     position: props.position,
     onCollide: (e) => {
       console.log(e);

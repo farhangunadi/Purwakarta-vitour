@@ -1,6 +1,8 @@
 import { Environment, Sky } from "@react-three/drei";
 import Head from "next/head";
 import { FrontMuseum } from "../components/Assets/FrontMuseum";
+import { KontenSideMuseum } from "../components/Assets/KontenSideMuseum";
+import { PetaPurwakarta } from "../components/Assets/PetaPurwakarta";
 import { PintuMasuk } from "../components/Assets/Pintu Masuk/PintuMasuk";
 import { SideMuseum } from "../components/Assets/SideMuseum";
 import { TembokInfo } from "../components/Assets/TembokInfo";
@@ -37,6 +39,15 @@ export default function Home() {
           position={[89, 0.02, -38]}
           scale={2.6}
         />
+        <KontenSideMuseum
+          rotation={[0, Math.PI / -2, 0]}
+          position={[88.7, -0.06, -38.4]}
+          scale={2.6}
+        />
+        <PetaPurwakarta
+          position={[110, 1, 0]}
+          rotation={[0, Math.PI / -2, 0]}
+        />
         <PintuMasuk />
         <Vegetation />
         <Sky sunPosition={[0, 10, 0]} azimuth={0.25} inclination={10} />
@@ -44,7 +55,7 @@ export default function Home() {
       </BaseScene>
       <div className={styles.dot}></div>
       <div className={styles.back}>
-        <a href="/" className={styles.backBtn}>
+        <a href="/wisata" className={styles.backBtn}>
           Back
         </a>
       </div>
