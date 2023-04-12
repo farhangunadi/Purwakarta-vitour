@@ -41,6 +41,27 @@ export function Pendopo(props) {
           material={materials["wood.013"]}
         />
       </group>
+      <group position={[0.11, 0.05, 10.07]} scale={[1.63, 0.38, 0.07]}>
+        <mesh
+          geometry={nodes.Plane003_1.geometry}
+          material={materials.Material}
+        />
+        <mesh geometry={nodes.Plane003_2.geometry} material={materials.foto1} />
+      </group>
+      <group position={[-3.35, 0.1, 10.07]} scale={[0.76, 0.38, 0.07]}>
+        <mesh
+          geometry={nodes.Plane006_1.geometry}
+          material={materials.Material}
+        />
+        <mesh geometry={nodes.Plane006_2.geometry} material={materials.foto3} />
+      </group>
+      <group position={[3.73, 0.07, 10.07]} scale={[0.76, 0.38, 0.07]}>
+        <mesh
+          geometry={nodes.Plane007_1.geometry}
+          material={materials.Material}
+        />
+        <mesh geometry={nodes.Plane007_2.geometry} material={materials.foto2} />
+      </group>
       <group position={[0.02, 0.64, 0]} scale={[5.4, 4.26, 6.33]}>
         <mesh
           geometry={nodes.Plane_1.geometry}
@@ -91,11 +112,11 @@ export function Pendopo(props) {
       />
       <group position={[5.12, 0.86, 10.09]} scale={0.29}>
         <mesh
-          geometry={nodes.Plane005.geometry}
+          geometry={nodes.Plane005_1.geometry}
           material={materials["Material.001"]}
         />
         <mesh
-          geometry={nodes.Plane005_1.geometry}
+          geometry={nodes.Plane005_2.geometry}
           material={materials["Material.002"]}
         />
       </group>
@@ -118,6 +139,62 @@ export function Pendopo(props) {
         material={materials["Material.007"]}
         position={[0.1, 6.32, 0.01]}
         scale={1.13}
+      />
+      <mesh
+        geometry={nodes.Text.geometry}
+        material={materials["Material.003"]}
+        position={[0.08, 0.7, 10.15]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={0.3}
+      />
+      <mesh
+        geometry={nodes.Text001.geometry}
+        material={materials["Material.003"]}
+        position={[3, 0.92, 10.15]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={0.17}
+      />
+      <mesh
+        geometry={nodes.Text002.geometry}
+        material={materials["Material.003"]}
+        position={[3, 0.8, 10.15]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={0.17}
+      />
+      <mesh
+        geometry={nodes.Text003.geometry}
+        material={materials["Material.003"]}
+        position={[-4.08, 0.95, 10.15]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={0.17}
+      />
+      <mesh
+        geometry={nodes.Text004.geometry}
+        material={materials["Material.003"]}
+        position={[-4.07, 0.82, 10.15]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={0.17}
+      />
+      <mesh
+        geometry={nodes.Plane008.geometry}
+        material={nodes.Plane008.material}
+        position={[3.73, 0.06, 10.05]}
+        rotation={[0, 0, -Math.PI]}
+        scale={[-0.98, -1, -0.24]}
+      />
+      <mesh
+        geometry={nodes.Plane009.geometry}
+        material={nodes.Plane009.material}
+        position={[0.11, 0.06, 10.05]}
+        rotation={[0, 0, -Math.PI]}
+        scale={[-1.81, -1, -0.24]}
+      />
+      <mesh
+        geometry={nodes.Plane010.geometry}
+        material={nodes.Plane010.material}
+        position={[-3.34, 0.1, 10.05]}
+        rotation={[0, 0, -Math.PI]}
+        scale={[-0.98, -1, -0.24]}
       />
     </group>
   );

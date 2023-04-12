@@ -106,7 +106,7 @@ export function GnParang(props) {
         />
       </group>
       <group
-        position={[-0.27, 1.28, 4.07]}
+        position={[-0.86, 3.61, 1.59]}
         rotation={[0, -1.5, 0]}
         scale={0.05}
       >
@@ -189,21 +189,21 @@ export function GnParang(props) {
       </group>
       <group position={[1.08, 0.32, 7.47]} rotation={[0, 0.79, 0]} scale={0.05}>
         <mesh
-          geometry={nodes.Cube019.geometry}
+          geometry={nodes.Cube019_1.geometry}
           material={materials["Material.005"]}
         />
         <mesh
-          geometry={nodes.Cube019_1.geometry}
+          geometry={nodes.Cube019_2.geometry}
           material={materials["Material.004"]}
         />
       </group>
       <group position={[3.36, 0.62, 8.29]} rotation={[0, 0.79, 0]} scale={0.05}>
         <mesh
-          geometry={nodes.Cube020.geometry}
+          geometry={nodes.Cube020_1.geometry}
           material={materials["Material.005"]}
         />
         <mesh
-          geometry={nodes.Cube020_1.geometry}
+          geometry={nodes.Cube020_2.geometry}
           material={materials["Material.004"]}
         />
       </group>
@@ -267,6 +267,122 @@ export function GnParang(props) {
           material={materials["Material.007"]}
         />
       </group>
+      <mesh
+        geometry={nodes.Text.geometry}
+        material={nodes.Text.material}
+        position={[-0.91, 1.75, 2.97]}
+        rotation={[Math.PI / 2, 0, 0]}
+      />
+      <mesh
+        geometry={nodes.NurbsPath.geometry}
+        material={nodes.NurbsPath.material}
+        position={[0, -0.09, 0.11]}
+      />
+      <group
+        position={[2.74, 0.98, 10.01]}
+        rotation={[0, -0.38, 0]}
+        scale={[1.41, 0.76, 0.06]}
+      >
+        <mesh
+          geometry={nodes.Cube024.geometry}
+          material={materials["Material.012"]}
+        />
+        <mesh
+          geometry={nodes.Cube024_1.geometry}
+          material={materials["foto 1"]}
+        />
+      </group>
+      <group
+        position={[4.93, 0.87, 10.55]}
+        rotation={[0, -0.43, 0]}
+        scale={[0.74, 0.76, 0.06]}
+      >
+        <mesh
+          geometry={nodes.Cube025.geometry}
+          material={materials["Material.012"]}
+        />
+        <mesh
+          geometry={nodes.Cube025_1.geometry}
+          material={materials["foto 2"]}
+        />
+      </group>
+      <group
+        position={[6.45, 0.87, 10.85]}
+        rotation={[0, -0.4, 0]}
+        scale={[0.74, 0.76, 0.06]}
+      >
+        <mesh
+          geometry={nodes.Cube026.geometry}
+          material={materials["Material.012"]}
+        />
+        <mesh
+          geometry={nodes.Cube026_1.geometry}
+          material={materials["foto 3"]}
+        />
+      </group>
+      <group
+        position={[7.97, 1, 11.19]}
+        rotation={[0, -0.4, 0]}
+        scale={[0.74, 0.76, 0.06]}
+      >
+        <mesh
+          geometry={nodes.Cube028.geometry}
+          material={materials["Material.012"]}
+        />
+        <mesh
+          geometry={nodes.Cube028_1.geometry}
+          material={materials["foto 4"]}
+        />
+      </group>
+      <mesh
+        geometry={nodes.Text001.geometry}
+        material={materials["Material.015"]}
+        position={[2.73, 0.7, 10.08]}
+        rotation={[Math.PI / 2, 0, 0.38]}
+        scale={0.22}
+      />
+      <mesh
+        geometry={nodes.Text002.geometry}
+        material={materials["Material.015"]}
+        position={[4.42, 0.75, 10.39]}
+        rotation={[Math.PI / 2, 0, 0.43]}
+        scale={0.1}
+      />
+      <mesh
+        geometry={nodes.Text003.geometry}
+        material={materials["Material.015"]}
+        position={[4.3, 0.64, 10.34]}
+        rotation={[Math.PI / 2, 0, 0.43]}
+        scale={0.07}
+      />
+      <mesh
+        geometry={nodes.Text004.geometry}
+        material={materials["Material.015"]}
+        position={[6.15, 0.76, 10.79]}
+        rotation={[Math.PI / 2, 0, 0.4]}
+        scale={0.1}
+      />
+      <mesh
+        geometry={nodes.Text005.geometry}
+        material={materials["Material.015"]}
+        position={[5.81, 0.67, 10.65]}
+        rotation={[Math.PI / 2, 0, 0.4]}
+        scale={0.05}
+      />
+      <mesh
+        geometry={nodes.Text006.geometry}
+        material={materials["Material.015"]}
+        position={[7.79, 0.86, 11.18]}
+        rotation={[Math.PI / 2, 0, 0.4]}
+        scale={0.1}
+      />
+      <mesh
+        geometry={nodes.Text007.geometry}
+        material={materials["Material.015"]}
+        position={[7.32, 0.77, 10.98]}
+        rotation={[Math.PI / 2, 0, 0.4]}
+        scale={0.05}
+      />
     </group>
   );
 }
