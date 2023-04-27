@@ -5,6 +5,7 @@ import {
   Stage,
   PointerLockControls,
   Loader,
+  OrbitControls,
 } from "@react-three/drei";
 import { Physics } from "@react-three/cannon";
 import Floor from "../Basic Compt/Floor";
