@@ -1,14 +1,23 @@
 import React from "react";
 import AFRAME from "aframe";
 import { Entity, Scene } from "aframe-react";
+import { FrontSide } from "./FrontSide";
 
 function VRgameplay() {
   return (
     <Scene>
-      <a-camera position="0 1 0" rotation="0 90 0">
+      {/* <a-camera position="0 1 0" rotation="0 90 0">
         <a-cursor></a-cursor>
-      </a-camera>
+      </a-camera> */}
       <a-assets>
+        <a-asset-item
+          id="tembokInfo2"
+          src="./models/tembokInfo2.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="tembokInfo"
+          src="./models/tembokInfo.glb"
+        ></a-asset-item>
         <a-asset-item
           id="frontMuseum"
           src="./models/FrontMuseum.glb"
@@ -23,7 +32,20 @@ function VRgameplay() {
         width="1000"
         material={{ color: "#215763", opacity: 0.7 }}
       />
-      <Entity gltf-model="#frontMuseum" />
+      <Entity gltf-model="#frontMuseum" rotation="0 90 0" />
+      <Entity
+        gltf-model="#tembokInfo2"
+        rotation="0 90 0"
+        scale="0.9 0.9 0.9"
+        position="-5 0 -65"
+      />
+      <Entity
+        gltf-model="#tembokInfo"
+        rotation="0 180 0"
+        scale="0.9 0.9 0.9"
+        position="5 0 -65"
+      />
+      <FrontSide />
     </Scene>
   );
 }
