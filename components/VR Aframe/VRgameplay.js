@@ -22,6 +22,14 @@ function VRgameplay() {
           id="frontMuseum"
           src="./models/FrontMuseum.glb"
         ></a-asset-item>
+        <a-asset-item
+          id="sideMuseum"
+          src="./models/sideMuseum.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="KontenSideMuseum"
+          src="./models/kontenSejarahPurwakarta.glb"
+        ></a-asset-item>
       </a-assets>
 
       <Entity primitive="a-cylinder" color="blue" position="2 0 -3" />
@@ -44,6 +52,12 @@ function VRgameplay() {
         rotation="0 180 0"
         scale="0.9 0.9 0.9"
         position="5 0 -65"
+      />
+      <Entity gltf-model="#sideMuseum" position="-31 0 -95" scale="2 2 2" />
+      <Entity
+        gltf-model="#KontenSideMuseum"
+        position="-31 0 -94.8"
+        scale="1.9 1.9 1.9"
       />
       <FrontSide />
     </Scene>
