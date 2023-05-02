@@ -20,7 +20,7 @@ function VRgameplay() {
 
     let sceneEl = document.querySelector("#scene");
     let cameraDirection = sceneEl.camera.getWorldDirection(direction);
-    cameraDirection.multiplyScalar(0.4);
+    cameraDirection.multiplyScalar(0.1);
 
     if (ev.srcElement.id == "up") {
       console.log("up");
