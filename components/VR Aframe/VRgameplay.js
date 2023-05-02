@@ -56,8 +56,8 @@ function VRgameplay() {
       let cam = document.querySelector("#cam");
       let position = cam.getAttribute("position");
 
-      position.x = movement.x;
-      position.z = movement.z;
+      position.x += movement.x;
+      position.z += movement.z;
       cam.setAttribute("position", position);
     },
     init: function () {
