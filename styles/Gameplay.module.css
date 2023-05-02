@@ -51,3 +51,11 @@
   left: 15px;
   transform: rotate(-90deg);
 }
+@media only screen and (min-width: 768px) {
+  .upBtn,
+  .downBtn,
+  .rightBtn,
+  .leftBtn {
+    display: none;
+  }
+}
