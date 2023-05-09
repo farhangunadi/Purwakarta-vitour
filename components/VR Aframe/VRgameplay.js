@@ -6,6 +6,7 @@ import Image from "next/image";
 import styles from "../../styles/Gameplay.module.css";
 import * as THREE from "three";
 import Head from "next/head";
+import PopUpMessage from "./PopUpMessage";
 
 function VRgameplay() {
   let direction = new THREE.Vector3();
@@ -221,6 +222,7 @@ function VRgameplay() {
           scale="1.9 1.9 1.9"
         ></a-gltf-model>
         <FrontSide />
+        <PopUpMessage />
       </a-scene>
       <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     </>

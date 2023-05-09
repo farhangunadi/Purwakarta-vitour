@@ -10,8 +10,15 @@ function WisataVR() {
       <Head>
         <script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"></script>
       </Head>
-      <a-scene>
-        <a-camera id="camera" position="0 1.6 0"></a-camera>
+      <a-scene joystick>
+        <a-camera
+          id="camera"
+          look-controls="pointerLockEnabled:true"
+          position="0 1.6 0"
+          wasd-controls="acceleration: 40"
+        >
+          <a-cursor material="color: red; shader: flat"></a-cursor>
+        </a-camera>
         <a-assets>
           <a-asset-item
             id="gapura"
@@ -67,7 +74,6 @@ function WisataVR() {
           position="0 0 -130"
           material={{ color: "black", opacity: 1 }}
         />
-        <a-text value="Hello, World!" position="0 3 0"></a-text>
         <a-plane
           position="0 0 -4"
           rotation="-90 0 0"
