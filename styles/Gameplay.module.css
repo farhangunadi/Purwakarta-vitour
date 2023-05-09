@@ -16,12 +16,20 @@
   position: absolute;
   left: 10px;
   top: 10px;
-  padding: 10px 15px;
-  background-color: rgb(250, 208, 110);
+  padding: 15px 15px;
+  background-color: #33b249;
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
+  border-style: none;
+  z-index: 2;
+  transition: 0.2s all;
+  cursor: pointer;
   border-radius: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.backBtn:hover {
+  transform: scale(1.05);
 }
 .upBtn,
 .downBtn,

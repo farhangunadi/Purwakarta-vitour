@@ -67,6 +67,7 @@ function WisataVR() {
           position="0 0 -130"
           material={{ color: "black", opacity: 1 }}
         />
+        <a-text value="Hello, World!" position="0 3 0"></a-text>
         <a-plane
           position="0 0 -4"
           rotation="-90 0 0"

@@ -5,9 +5,22 @@ import Head from "next/head";
 import { Entity } from "aframe-react";
 
 function MainMenu() {
-  AFRAME.registerComponent("hello-world", {
+  // AFRAME.registerComponent("hello-world", {
+  //   init: function () {
+  //     console.log("Hello, World!");
+  //   },
+  // });
+  AFRAME.registerComponent("navigate-on-click", {
+    schema: {
+      url: { default: "" },
+    },
     init: function () {
-      console.log("Hello, World!");
+      var data = this.data;
+      var el = this.el;
+
+      el.addEventListener("touchstart", function () {
+        window.location.href = data.url;
+      });
     },
   });
   return (
@@ -24,6 +37,7 @@ function MainMenu() {
           look-controls="pointerLockEnabled:true"
           position="0 1.6 0"
           rotation="0 90 0"
+          wasd-controls-enabled="false"
         >
           <a-cursor></a-cursor>
         </a-camera>
@@ -33,7 +47,7 @@ function MainMenu() {
           <img id="menu3" src="images/menu (3).png" />
           <img id="button" src="images/button.png" />
         </a-assets>
-        <a-camera id="camera" position="0 1.6 0"></a-camera>
+
         <a-image
           src="#menu1"
           width="5"
@@ -55,7 +69,8 @@ function MainMenu() {
           height="0.5"
           position=" 1.2 1.2 -2.49"
           rotation="0 0 0"
-          hello-world
+          link="href: /gameplay"
+          navigate-on-click="url: /gameplay"
         ></a-image>
         <a-image
           src="#menu3"

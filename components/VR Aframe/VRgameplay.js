@@ -116,6 +116,9 @@ function VRgameplay() {
         height="100"
         alt="arrowBtn"
       /> */}
+      <a className={styles.backBtn} href="/">
+        Back to Homepage
+      </a>
       <a-scene id="scene" joystick>
         <a-assets>
           <a-asset-item
@@ -143,14 +146,17 @@ function VRgameplay() {
             crossorigin="anonymous"
             src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg"
           ></img>
+          <img id="joystick" src="images/joystick.png" />
+          <img id="keyboard" src="images/keyboard.png" />
         </a-assets>
         <a-camera
           id="camera"
           look-controls="pointerLockEnabled:true"
-          position="0 1.6 0"
+          position="0 1.6 10"
           rotation="0 90 0"
+          wasd-controls="acceleration: 40"
         >
-          <a-cursor></a-cursor>
+          <a-cursor material="color: red; shader: flat"></a-cursor>
         </a-camera>
         <a-plane
           color="#215763"
@@ -166,6 +172,31 @@ function VRgameplay() {
           data-set-image-fade-setup="true"
           animation__fade=""
         ></a-sky>
+        {/* guide */}
+        <a-box
+          color="tomato"
+          depth="0.1"
+          height="6"
+          width="8"
+          position="0 1.6 0"
+          material="color: #EF2D5E; transparent: true; opacity: 0.8"
+        ></a-box>
+        <a-text value="Guide" position="0 4 0.1" align="center"></a-text>
+        <a-image
+          src="#keyboard"
+          width="4"
+          height="2"
+          position="-1.5 2.8 0.1"
+        ></a-image>
+        <a-text value="Mobile Version" position="-3.5 1.3 0.1"></a-text>
+        <a-image
+          src="#joystick"
+          width="1.6"
+          height="0.6"
+          position="-2.7 0.8 0.1"
+        ></a-image>
+
+        {/* model */}
         <a-gltf-model src="#frontMuseum" rotation="0 90 0"></a-gltf-model>
         <a-gltf-model
           src="#tembokInfo2"
