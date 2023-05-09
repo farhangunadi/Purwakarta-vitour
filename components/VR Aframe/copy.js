@@ -62,3 +62,6 @@ export default function Home() {
     </>
   );
 }
+
+// link="href: /gameplay"
+//           navigate-on-click="url: /gameplay"
