@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../../../styles/SplashScreen.module.css";
 
 function SplashScreen() {
+  const [guide, setGuide] = useState(1);
+  const handleGuideVersion = (buttonId) => {
+    setGuide(buttonId);
+  };
+
   return (
     <div className={styles.SplashContainer}>
       <div className={styles.splash_content}>
@@ -16,15 +21,45 @@ function SplashScreen() {
           Sebelum memulai petualangan, bacalah petunjuk dibawah ini:
         </p>
         <div className={styles.btn_wrap}>
-          <button className={styles.btn_guide}>Desktop</button>
-          <button className={styles.btn_guide}>Mobile</button>
+          <button
+            style={{
+              backgroundColor: guide === 1 ? "#E1CD8A" : "#4c3d3d",
+              color: guide == 1 ? "#4c3d3d" : "",
+            }}
+            onClick={() => handleGuideVersion(1)}
+            className={styles.btn_guide}
+          >
+            Desktop
+          </button>
+          <button
+            style={{
+              backgroundColor: guide === 2 ? "#E1CD8A" : "#4c3d3d",
+              color: guide == 2 ? "#4c3d3d" : "",
+            }}
+            onClick={() => handleGuideVersion(2)}
+            className={styles.btn_guide}
+          >
+            Mobile
+          </button>
         </div>
-        <div className={styles.guide} id="desktop_guide">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          rem eius animi est suscipit harum quidem, hic aliquam similique porro
-          rerum eligendi alias! Aliquid incidunt eligendi excepturi ullam vero
-          possimus!
-        </div>
+        {guide == 1 ? (
+          <div className={styles.guide} id="desktop_guide">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+            rem eius animi est suscipit harum quidem, hic aliquam similique
+            porro rerum eligendi alias! Aliquid incidunt eligendi excepturi
+            ullam vero possimus!
+          </div>
+        ) : (
+          <div className={styles.guide} id="mobile_guide">
+            Mobile,Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Veritatis, rem eius animi est suscipit harum quidem, hic aliquam
+            similique porro rerum eligendi alias! Aliquid incidunt eligendi
+            excepturi ullam vero possimus!
+          </div>
+        )}
+        <a className={styles.play_button} href="/mainmenu">
+          Mulai
+        </a>
       </div>
     </div>
   );

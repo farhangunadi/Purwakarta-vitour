@@ -52,33 +52,51 @@
   align-items: center;
   margin-top: 30px;
 }
+.btn_guide,
+.play_button {
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: normal;
+
+  cursor: pointer;
+}
+.guide {
+  width: auto;
+  max-width: 1280px;
+  margin: 30px auto;
+  height: fit-content;
+  padding: 15px;
+  background: #e1cd8a;
+  border-radius: 14px;
+  color: #4c3d3d;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+}
 .btn_guide {
   width: 13vw;
   height: 7vh;
   padding: 10px;
   background: #4c3d3d;
   border-radius: 10.9846px;
-  border: none;
-  text-align: center;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: normal;
+  border: solid 3px #4c3d3d;
   color: white;
   margin: 0 10px;
-  cursor: pointer;
 }
-.guide {
-  width: auto;
-  margin: 30px auto;
-  height: fit-content;
-  padding: 15px;
-  background: #4c3d3d;
-  border-radius: 14px;
-  color: white;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
+.play_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 8vh;
+  padding: 2px 8px;
+  background: #ffd95a;
+  border-radius: 10.9846px;
+  color: #534444;
+  margin: 0 auto;
+  text-decoration: none;
 }
