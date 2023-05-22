@@ -6,7 +6,7 @@ import Image from "next/image";
 import styles from "../../styles/Gameplay.module.css";
 import * as THREE from "three";
 import Head from "next/head";
-import PopUpMessage from "./PopUpMessage";
+import ContentMuseum from "./Information Component/ContentMuseum";
 
 function VRgameplay() {
   let direction = new THREE.Vector3();
@@ -147,8 +147,7 @@ function VRgameplay() {
             crossorigin="anonymous"
             src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg"
           ></img>
-          <img id="joystick" src="images/joystick.png" />
-          <img id="keyboard" src="images/keyboard.png" />
+          <img id="guide" src="images/guide.png" />
         </a-assets>
         <a-camera
           id="camera"
@@ -175,27 +174,19 @@ function VRgameplay() {
         ></a-sky>
         {/* guide */}
         <a-box
-          color="tomato"
           depth="0.1"
           height="6"
-          width="8"
+          width="9"
           position="0 1.6 0"
-          material="color: #EF2D5E; transparent: true; opacity: 0.8"
+          material="color: #100244; transparent: true; opacity: 0.94"
         ></a-box>
-        <a-text value="Guide" position="0 4 0.1" align="center"></a-text>
-        <a-image
-          src="#keyboard"
-          width="4"
-          height="2"
-          position="-1.5 2.8 0.1"
-        ></a-image>
-        <a-text value="Mobile Version" position="-3.5 1.3 0.1"></a-text>
-        <a-image
-          src="#joystick"
-          width="1.6"
-          height="0.6"
-          position="-2.7 0.8 0.1"
-        ></a-image>
+        <a-text
+          value="Petunjuk"
+          scale="2 2 2"
+          position="0 4 0.1"
+          align="center"
+        ></a-text>
+        <a-image src="#guide" width="8" height="3" position="0 2 0.1"></a-image>
 
         {/* model */}
         <a-gltf-model src="#frontMuseum" rotation="0 90 0"></a-gltf-model>
@@ -222,7 +213,7 @@ function VRgameplay() {
           scale="1.9 1.9 1.9"
         ></a-gltf-model>
         <FrontSide />
-        <PopUpMessage />
+        <ContentMuseum />
       </a-scene>
       <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     </>
