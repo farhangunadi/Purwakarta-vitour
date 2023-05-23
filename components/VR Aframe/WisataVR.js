@@ -50,6 +50,7 @@ function WisataVR() {
           data-set-image-fade-setup="true"
           animation__fade=""
         ></a-sky>
+        r
         <a-gltf-model
           src="#gapura"
           rotation="0 90 0"

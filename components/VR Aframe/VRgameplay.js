@@ -80,6 +80,22 @@ function VRgameplay() {
     },
   });
 
+  AFRAME.registerComponent("video-controls", {
+    init: function () {
+      var myVideo = document.querySelector("#profilePwk");
+      var videoControl = document.querySelector("#videoControls");
+      this.el.addEventListener("click", function () {
+        if (myVideo.paused) {
+          myVideo.play();
+          videoControl.setAttribute("src", "#pause");
+        } else {
+          myVideo.pause();
+          videoControl.setAttribute("src", "#play");
+        }
+      });
+    },
+  });
+
   return (
     <>
       <Head>
@@ -148,6 +164,9 @@ function VRgameplay() {
             src="images/citySky.jpg"
           ></img>
           <img id="guide" src="images/guide.png" />
+          <img id="play" src="images/play.png" />
+          <img id="pause" src="images/pause.png" />
+          <video id="profilePwk" src="video/profil_pwk.mp4" loop="true" />
         </a-assets>
         <a-camera
           id="camera"
@@ -212,6 +231,34 @@ function VRgameplay() {
           position="-31 0 -94.8"
           scale="1.9 1.9 1.9"
         ></a-gltf-model>
+        <a-entity>
+          <a-box
+            position="0 4.5 -110.52"
+            color="#432F2F"
+            width="8"
+            height="4.5"
+          ></a-box>
+          <a-video
+            src="#profilePwk"
+            width="8"
+            height="4.5"
+            position="0 4.5 -110"
+          ></a-video>
+          <a-cylinder
+            color="#B07217"
+            radius="1"
+            position="0 1.42 -110.26"
+            scale="0.5 0.5 0.5"
+            rotation="90 0 0"
+          ></a-cylinder>
+          <a-image
+            id="videoControls"
+            src="#play"
+            position="0 1.4 -110"
+            scale="1 1 3"
+            video-controls
+          ></a-image>
+        </a-entity>
         <FrontSide />
         <ContentMuseum />
       </a-scene>

@@ -26,8 +26,7 @@ function ContentMuseum() {
       title: "Wisata Gunung Parang Via Ferrata",
       content:
         "Pertunjukan air mancur adalah daya tarik utama dari tempat wisata ini. Mengombinasikan pencahayaan dan gerakan air mancur setinggi 6 meter, sangat menarik untuk ditonton. Pertunjukan air mancur dilaksanakan setiap hari Sabtu. Di hari tersebut, pengunjung bisa melihat 2 kali pertunjukan air mancur. Pertunjukan air mancur dilakukan pada malam hari. Pertama bisa dilihat pukul 19.30 WIB. Sedangkan pertunjukan kedua bisa dinikmati pukul 20.30 WIB. Tidak jarang pengunjung sangat ramai ketika atraksi ini berlangsung",
-      image:
-        "https://www.headlinejabar.com/wp-content/uploads/2016/04/Adv-Situ-Buleud2.jpg",
+      image: "/images/fotoContent/gnParang.jpg",
 
       boxPosition: "-5.2 1 -53",
       textPosition: "-5.1 1 -53",
@@ -38,8 +37,7 @@ function ContentMuseum() {
       title: "Kerajinan Keramik Plered",
       content:
         "Pertunjukan air mancur adalah daya tarik utama dari tempat wisata ini. Mengombinasikan pencahayaan dan gerakan air mancur setinggi 6 meter, sangat menarik untuk ditonton. Pertunjukan air mancur dilaksanakan setiap hari Sabtu. Di hari tersebut, pengunjung bisa melihat 2 kali pertunjukan air mancur. Pertunjukan air mancur dilakukan pada malam hari. Pertama bisa dilihat pukul 19.30 WIB. Sedangkan pertunjukan kedua bisa dinikmati pukul 20.30 WIB. Tidak jarang pengunjung sangat ramai ketika atraksi ini berlangsung",
-      image:
-        "https://www.headlinejabar.com/wp-content/uploads/2016/04/Adv-Situ-Buleud2.jpg",
+      image: "/images/fotoContent/pengrajinKeramik.jpg",
 
       boxPosition: "-5.2 1 -61",
       textPosition: "-5.1 1 -61",
@@ -50,8 +48,7 @@ function ContentMuseum() {
       title: "Wisata Waduk Jatiluhur",
       content:
         "Pertunjukan air mancur adalah daya tarik utama dari tempat wisata ini. Mengombinasikan pencahayaan dan gerakan air mancur setinggi 6 meter, sangat menarik untuk ditonton. Pertunjukan air mancur dilaksanakan setiap hari Sabtu. Di hari tersebut, pengunjung bisa melihat 2 kali pertunjukan air mancur. Pertunjukan air mancur dilakukan pada malam hari. Pertama bisa dilihat pukul 19.30 WIB. Sedangkan pertunjukan kedua bisa dinikmati pukul 20.30 WIB. Tidak jarang pengunjung sangat ramai ketika atraksi ini berlangsung",
-      image:
-        "https://www.headlinejabar.com/wp-content/uploads/2016/04/Adv-Situ-Buleud2.jpg",
+      image: "/images/fotoContent/",
 
       boxPosition: "-5.2 1 -69",
       textPosition: "-5.1 1 -69",
@@ -59,11 +56,10 @@ function ContentMuseum() {
     },
     {
       id: 5,
-      title: "Pasar Juma'ah",
+      title: "Wisata Kuliner Purwakarta",
       content:
         "Pertunjukan air mancur adalah daya tarik utama dari tempat wisata ini. Mengombinasikan pencahayaan dan gerakan air mancur setinggi 6 meter, sangat menarik untuk ditonton. Pertunjukan air mancur dilaksanakan setiap hari Sabtu. Di hari tersebut, pengunjung bisa melihat 2 kali pertunjukan air mancur. Pertunjukan air mancur dilakukan pada malam hari. Pertama bisa dilihat pukul 19.30 WIB. Sedangkan pertunjukan kedua bisa dinikmati pukul 20.30 WIB. Tidak jarang pengunjung sangat ramai ketika atraksi ini berlangsung",
-      image:
-        "https://www.headlinejabar.com/wp-content/uploads/2016/04/Adv-Situ-Buleud2.jpg",
+      image: "/images/fotoContent/wiskul.jpg",
 
       boxPosition: "-5.2 1 -77.1",
       textPosition: "-5.1 1 -77.1",
@@ -74,8 +70,7 @@ function ContentMuseum() {
       title: "Curug Cijalu",
       content:
         "Pertunjukan air mancur adalah daya tarik utama dari tempat wisata ini. Mengombinasikan pencahayaan dan gerakan air mancur setinggi 6 meter, sangat menarik untuk ditonton. Pertunjukan air mancur dilaksanakan setiap hari Sabtu. Di hari tersebut, pengunjung bisa melihat 2 kali pertunjukan air mancur. Pertunjukan air mancur dilakukan pada malam hari. Pertama bisa dilihat pukul 19.30 WIB. Sedangkan pertunjukan kedua bisa dinikmati pukul 20.30 WIB. Tidak jarang pengunjung sangat ramai ketika atraksi ini berlangsung",
-      image:
-        "https://www.headlinejabar.com/wp-content/uploads/2016/04/Adv-Situ-Buleud2.jpg",
+      image: "/images/fotoContent/",
 
       boxPosition: "-5.2 1 -85.2",
       textPosition: "-5.1 1 -85.2",
@@ -86,8 +81,7 @@ function ContentMuseum() {
       title: "Sate Maranggi",
       content:
         "Pertunjukan air mancur adalah daya tarik utama dari tempat wisata ini. Mengombinasikan pencahayaan dan gerakan air mancur setinggi 6 meter, sangat menarik untuk ditonton. Pertunjukan air mancur dilaksanakan setiap hari Sabtu. Di hari tersebut, pengunjung bisa melihat 2 kali pertunjukan air mancur. Pertunjukan air mancur dilakukan pada malam hari. Pertama bisa dilihat pukul 19.30 WIB. Sedangkan pertunjukan kedua bisa dinikmati pukul 20.30 WIB. Tidak jarang pengunjung sangat ramai ketika atraksi ini berlangsung",
-      image:
-        "https://www.headlinejabar.com/wp-content/uploads/2016/04/Adv-Situ-Buleud2.jpg",
+      image: "/images/fotoContent/sate.jpeg",
 
       boxPosition: "4.7 1 -44.4",
       textPosition: "4.6 1 -44.4",
@@ -98,8 +92,7 @@ function ContentMuseum() {
       title: "Taman Sri Baduga",
       content:
         "Pertunjukan air mancur adalah daya tarik utama dari tempat wisata ini. Mengombinasikan pencahayaan dan gerakan air mancur setinggi 6 meter, sangat menarik untuk ditonton. Pertunjukan air mancur dilaksanakan setiap hari Sabtu. Di hari tersebut, pengunjung bisa melihat 2 kali pertunjukan air mancur. Pertunjukan air mancur dilakukan pada malam hari. Pertama bisa dilihat pukul 19.30 WIB. Sedangkan pertunjukan kedua bisa dinikmati pukul 20.30 WIB. Tidak jarang pengunjung sangat ramai ketika atraksi ini berlangsung",
-      image:
-        "https://www.headlinejabar.com/wp-content/uploads/2016/04/Adv-Situ-Buleud2.jpg",
+      image: "/images/fotoContent/tamansribaduga.jpg",
 
       boxPosition: "4.7 1 -52.4",
       textPosition: "4.6 1 -52.4",
@@ -110,8 +103,7 @@ function ContentMuseum() {
       title: "Peta Purwakarta",
       content:
         "Pertunjukan air mancur adalah daya tarik utama dari tempat wisata ini. Mengombinasikan pencahayaan dan gerakan air mancur setinggi 6 meter, sangat menarik untuk ditonton. Pertunjukan air mancur dilaksanakan setiap hari Sabtu. Di hari tersebut, pengunjung bisa melihat 2 kali pertunjukan air mancur. Pertunjukan air mancur dilakukan pada malam hari. Pertama bisa dilihat pukul 19.30 WIB. Sedangkan pertunjukan kedua bisa dinikmati pukul 20.30 WIB. Tidak jarang pengunjung sangat ramai ketika atraksi ini berlangsung",
-      image:
-        "https://www.headlinejabar.com/wp-content/uploads/2016/04/Adv-Situ-Buleud2.jpg",
+      image: "/images/fotoContent/peta.jpg",
 
       boxPosition: "4.7 1 -60.5",
       textPosition: "4.6 1 -60.5",
@@ -122,8 +114,7 @@ function ContentMuseum() {
       title: "Kantor Bupati dan Wakil Bupati Purwakarta",
       content:
         "Pertunjukan air mancur adalah daya tarik utama dari tempat wisata ini. Mengombinasikan pencahayaan dan gerakan air mancur setinggi 6 meter, sangat menarik untuk ditonton. Pertunjukan air mancur dilaksanakan setiap hari Sabtu. Di hari tersebut, pengunjung bisa melihat 2 kali pertunjukan air mancur. Pertunjukan air mancur dilakukan pada malam hari. Pertama bisa dilihat pukul 19.30 WIB. Sedangkan pertunjukan kedua bisa dinikmati pukul 20.30 WIB. Tidak jarang pengunjung sangat ramai ketika atraksi ini berlangsung",
-      image:
-        "https://www.headlinejabar.com/wp-content/uploads/2016/04/Adv-Situ-Buleud2.jpg",
+      image: "/images/fotoContent/kantor.jpg",
 
       boxPosition: "4.7 1 -68.5",
       textPosition: "4.6 1 -68.5",
@@ -134,8 +125,7 @@ function ContentMuseum() {
       title: "Bupati dan Wk.Bupati Purwakarta",
       content:
         "Pertunjukan air mancur adalah daya tarik utama dari tempat wisata ini. Mengombinasikan pencahayaan dan gerakan air mancur setinggi 6 meter, sangat menarik untuk ditonton. Pertunjukan air mancur dilaksanakan setiap hari Sabtu. Di hari tersebut, pengunjung bisa melihat 2 kali pertunjukan air mancur. Pertunjukan air mancur dilakukan pada malam hari. Pertama bisa dilihat pukul 19.30 WIB. Sedangkan pertunjukan kedua bisa dinikmati pukul 20.30 WIB. Tidak jarang pengunjung sangat ramai ketika atraksi ini berlangsung",
-      image:
-        "https://www.headlinejabar.com/wp-content/uploads/2016/04/Adv-Situ-Buleud2.jpg",
+      image: "/images/fotoContent/bupati.jpg",
 
       boxPosition: "4.7 1 -76.7",
       textPosition: "4.6 1 -76.7",
@@ -146,8 +136,7 @@ function ContentMuseum() {
       title: "Alun-Alun Purwakarta",
       content:
         "Pertunjukan air mancur adalah daya tarik utama dari tempat wisata ini. Mengombinasikan pencahayaan dan gerakan air mancur setinggi 6 meter, sangat menarik untuk ditonton. Pertunjukan air mancur dilaksanakan setiap hari Sabtu. Di hari tersebut, pengunjung bisa melihat 2 kali pertunjukan air mancur. Pertunjukan air mancur dilakukan pada malam hari. Pertama bisa dilihat pukul 19.30 WIB. Sedangkan pertunjukan kedua bisa dinikmati pukul 20.30 WIB. Tidak jarang pengunjung sangat ramai ketika atraksi ini berlangsung",
-      image:
-        "https://www.headlinejabar.com/wp-content/uploads/2016/04/Adv-Situ-Buleud2.jpg",
+      image: "/images/fotoContent/alunalun.jpg",
 
       boxPosition: "4.7 1 -84.7",
       textPosition: "4.6 1 -84.7",
