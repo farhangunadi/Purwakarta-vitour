@@ -37,7 +37,19 @@ function WisataVR() {
             id="gnParang"
             src="./models/gnParang.glb"
           ></a-asset-item>
+          <img
+            id="sechelt"
+            crossorigin="anonymous"
+            src="images/citySky.jpg"
+          ></img>
         </a-assets>
+        <a-sky
+          id="image-360"
+          radius="200"
+          src="#sechelt"
+          data-set-image-fade-setup="true"
+          animation__fade=""
+        ></a-sky>
         <a-gltf-model
           src="#gapura"
           rotation="0 90 0"

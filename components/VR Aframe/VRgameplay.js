@@ -145,7 +145,7 @@ function VRgameplay() {
           <img
             id="sechelt"
             crossorigin="anonymous"
-            src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg"
+            src="images/citySky.jpg"
           ></img>
           <img id="guide" src="images/guide.png" />
         </a-assets>
@@ -167,7 +167,7 @@ function VRgameplay() {
         ></a-plane>
         <a-sky
           id="image-360"
-          radius="1000"
+          radius="200"
           src="#sechelt"
           data-set-image-fade-setup="true"
           animation__fade=""
