@@ -7,7 +7,7 @@ export const FrontSide = () => {
       <a-assets>
         <a-asset-item id="lampion" src="./models/lampion.glb"></a-asset-item>
         <a-asset-item id="pager" src="./models/pagar.glb"></a-asset-item>
-        <a-asset-item id="pohon" src="./models/tree_lowpoly.glb"></a-asset-item>
+        <a-asset-item id="pohon" src="./models/tree.glb"></a-asset-item>
         <a-asset-item id="gedung1" src="./models/gedung1.glb"></a-asset-item>
         <a-asset-item id="gedung2" src="./models/gedung2.glb"></a-asset-item>
         <a-asset-item id="gedung3" src="./models/gedung3.glb"></a-asset-item>
@@ -108,85 +108,85 @@ export const FrontSide = () => {
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="10 0 0"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="10 0 -5"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="10 0 -10"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="10 0 -15"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="10 0 -20"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="10 0 -25"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="10 0 -30"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="-10 0 0"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="-10 0 -5"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="-10 0 -10"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="-10 0 -15"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="-10 0 -20"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="-10 0 -25"
       />
       <Entity
         gltf-model="#pohon"
         rotation="0 90 0"
-        scale="5 5 5"
+        scale="4 4 4"
         position="-10 0 -30"
       />
 

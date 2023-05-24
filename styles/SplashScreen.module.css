@@ -29,7 +29,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 4vw;
+  font-size: 40px;
   line-height: normal;
   text-align: center;
   color: #ffffff;
@@ -65,7 +65,7 @@
 }
 .guide {
   width: auto;
-  max-width: 1280px;
+  max-width: 70%;
   margin: 30px auto;
   height: fit-content;
   padding: 15px;
@@ -75,10 +75,10 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 15px;
 }
 .btn_guide {
-  width: 13vw;
+  width: 120px;
   height: 7vh;
   padding: 10px;
   background: #4c3d3d;
@@ -91,7 +91,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10vw;
+  width: 120px;
   height: 8vh;
   padding: 2px 8px;
   background: #ffd95a;
@@ -99,4 +99,20 @@
   color: #534444;
   margin: 0 auto;
   text-decoration: none;
+  transition: 0.3s all;
+}
+.play_button:hover {
+  transform: scale(1.05);
+}
+@media only screen and (max-width: 376px) {
+  .splash_desc {
+    width: 80%;
+    font-size: 12px;
+  }
+  .btn_wrap {
+    width: 100px;
+  }
+  .guide {
+    font-size: 10px;
+  }
 }

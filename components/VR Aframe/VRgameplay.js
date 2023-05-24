@@ -133,10 +133,14 @@ function VRgameplay() {
         height="100"
         alt="arrowBtn"
       /> */}
-      <a className={styles.backBtn} href="/">
+      <a className={styles.backBtn} href="/mainmenu">
         Back to Homepage
       </a>
-      <a-scene id="scene" joystick>
+      <a-scene
+        id="scene"
+        reflection="directionalLight:a-light#dirlight;"
+        joystick
+      >
         <a-assets>
           <a-asset-item
             id="tembokInfo2"
@@ -166,6 +170,7 @@ function VRgameplay() {
           <img id="guide" src="images/guide.png" />
           <img id="play" src="images/play.png" />
           <img id="pause" src="images/pause.png" />
+          <img id="env" src="images/ehingen_hillside_2k.jpg" />
           <video id="profilePwk" src="video/profil_pwk.mp4" loop="true" />
         </a-assets>
         <a-camera
@@ -177,8 +182,32 @@ function VRgameplay() {
         >
           <a-cursor material="color: red; shader: flat"></a-cursor>
         </a-camera>
+        {/* <a-light
+          type="hemisphere"
+          color="#FFFFFF"
+          ground-color="#000000"
+          intensity="1"
+        >
+          <a-entity geometry="primitive: sphere; radius: 1;"></a-entity>
+          <a-entity material="shader: flat; src: images/ehingen_hillside_2k.jpg;"></a-entity>
+        </a-light> */}
+
+        <a-light
+          id="dirlight"
+          intensity="0.7"
+          light="castShadow:true;type:directional"
+          position="0.5 1 1"
+          color="#FFBC80"
+        ></a-light>
+        <a-light
+          type="ambient"
+          color="#ffff"
+          position="0 0 1"
+          intensity="0.3"
+        ></a-light>
+
         <a-plane
-          color="#215763"
+          color="#40513B"
           height="1000"
           width="1000"
           rotation="-90 0 0"
@@ -233,7 +262,7 @@ function VRgameplay() {
         ></a-gltf-model>
         <a-entity>
           <a-box
-            position="0 4.5 -110.52"
+            position="-0.3 4.5 -110.53"
             color="#432F2F"
             width="8"
             height="4.5"
@@ -242,19 +271,19 @@ function VRgameplay() {
             src="#profilePwk"
             width="8"
             height="4.5"
-            position="0 4.5 -110"
+            position="-0.3 4.5 -110"
           ></a-video>
           <a-cylinder
             color="#B07217"
             radius="1"
-            position="0 1.42 -110.26"
+            position="-0.2 1.42 -110.26"
             scale="0.5 0.5 0.5"
             rotation="90 0 0"
           ></a-cylinder>
           <a-image
             id="videoControls"
             src="#play"
-            position="0 1.4 -110"
+            position="-0.2 1.4 -110"
             scale="1 1 3"
             video-controls
           ></a-image>
