@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import AFRAME from "aframe";
-import { AFrameRenderer, Entity, Scene } from "aframe-react";
 import { FrontSide } from "./FrontSide";
 import Image from "next/image";
 import styles from "../../styles/Gameplay.module.css";
@@ -9,77 +8,6 @@ import Head from "next/head";
 import ContentMuseum from "./Information Component/ContentMuseum";
 
 function VRgameplay() {
-  let direction = new THREE.Vector3();
-  let movement = new THREE.Vector3();
-
-  function touchEndListener() {
-    movement = new THREE.Vector3();
-  }
-
-  function clickListener(ev) {
-    let cam = document.querySelector("#cam");
-    let position = cam.getAttribute("position");
-
-    let sceneEl = document.querySelector("#scene");
-    let cameraDirection = sceneEl.camera.getWorldDirection(direction);
-    cameraDirection.multiplyScalar(0.1);
-
-    if (ev.srcElement.id == "up") {
-      console.log("up");
-
-      movement.x += cameraDirection.x;
-      movement.z += cameraDirection.z;
-    } else if (ev.srcElement.id == "down") {
-      console.log("down");
-
-      movement.x -= cameraDirection.x;
-      movement.z -= cameraDirection.z;
-    }
-
-    let sideDirection = cameraDirection.cross(new THREE.Vector3(0, 1, 0));
-    if (ev.srcElement.id == "right") {
-      console.log("right");
-
-      movement.x += sideDirection.x;
-      movement.z += sideDirection.z;
-    } else if (ev.srcElement.id == "left") {
-      console.log("left");
-
-      movement.x -= sideDirection.x;
-      movement.z -= sideDirection.z;
-    }
-    cam.setAttribute("position", position);
-  }
-  AFRAME.registerComponent("player-movement", {
-    tick: function () {
-      if (movement.length() == 0) {
-        return;
-      }
-      let cam = document.querySelector("#cam");
-      let position = cam.getAttribute("position");
-
-      position.x += movement.x;
-      position.z += movement.z;
-      cam.setAttribute("position", position);
-    },
-    init: function () {
-      let up = document.querySelector("#up");
-      let down = document.querySelector("#down");
-      let left = document.querySelector("#left");
-      let right = document.querySelector("#right");
-
-      up.addEventListener("touchstart", clickListener);
-      down.addEventListener("touchstart", clickListener);
-      left.addEventListener("touchstart", clickListener);
-      right.addEventListener("touchstart", clickListener);
-
-      up.addEventListener("touchend", touchEndListener);
-      down.addEventListener("touchend", touchEndListener);
-      left.addEventListener("touchend", touchEndListener);
-      right.addEventListener("touchend", touchEndListener);
-    },
-  });
-
   AFRAME.registerComponent("video-controls", {
     init: function () {
       var myVideo = document.querySelector("#profilePwk");
@@ -96,46 +24,49 @@ function VRgameplay() {
     },
   });
 
+  const [musicControls, setMusicControls] = useState(false);
+  const musicRef = useRef(null);
+
+  const handlePlayMusic = () => {
+    musicRef.current.play();
+    setMusicControls(true);
+  };
+
+  const handleStopMusic = () => {
+    const music = musicRef.current;
+    music.pause();
+    music.currentTime = 0;
+    setMusicControls(false);
+  };
+
   return (
     <>
       <Head>
         <script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"></script>
       </Head>
-      {/* <Image
-        id="up"
-        src="/images/arrow.png"
-        className={styles.upBtn}
-        width="100"
-        height="100"
-        alt="arrowBtn"
-      />
-      <Image
-        id="down"
-        src="/images/arrow.png"
-        className={styles.downBtn}
-        width="100"
-        height="100"
-        alt="arrowBtn"
-      />
-      <Image
-        id="right"
-        src="/images/arrow.png"
-        className={styles.rightBtn}
-        width="100"
-        height="100"
-        alt="arrowBtn"
-      />
-      <Image
-        id="left"
-        src="/images/arrow.png"
-        className={styles.leftBtn}
-        width="100"
-        height="100"
-        alt="arrowBtn"
-      /> */}
+
       <a className={styles.backBtn} href="/mainmenu">
         Back to Homepage
       </a>
+      {musicControls ? (
+        <Image
+          width="100"
+          height="100"
+          src="/images/pauseSound.png"
+          className={styles.btnMusic}
+          onClick={handleStopMusic}
+          alt="stopMusicIcon"
+        />
+      ) : (
+        <Image
+          width="100"
+          height="100"
+          src="/images/playSound.png"
+          className={styles.btnMusic}
+          onClick={handlePlayMusic}
+          alt="playMusicIcon"
+        />
+      )}
       <a-scene
         id="scene"
         reflection="directionalLight:a-light#dirlight;"
@@ -172,6 +103,13 @@ function VRgameplay() {
           <img id="pause" src="images/pause.png" />
           <img id="env" src="images/ehingen_hillside_2k.jpg" />
           <video id="profilePwk" src="video/profil_pwk.mp4" loop="true" />
+          <audio
+            id="music"
+            src="music/music.mp3"
+            ref={musicRef}
+            loop="true"
+            autoPlay
+          ></audio>
         </a-assets>
         <a-camera
           id="camera"
@@ -290,7 +228,15 @@ function VRgameplay() {
         </a-entity>
         <FrontSide />
         <ContentMuseum />
+        {/* <div className={styles.pauseMenu}>
+          <h1 className={styles.pauseTitle} onClick={handlePlayAgain}>
+            Pause
+          </h1>
+          <button className={styles.btnPause}>Play</button>
+          <button className={styles.btnPause}>Exit</button>
+        </div> */}
       </a-scene>
+
       <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     </>
   );
