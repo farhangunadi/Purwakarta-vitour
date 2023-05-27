@@ -1,7 +1,42 @@
 import React from "react";
-import { Entity, Scene } from "aframe-react";
+import { Scene } from "aframe-react";
 
 export const FrontSide = () => {
+  const lampionPosition = [
+    "0 0 -5",
+    "0 0 -10",
+    "0 0 -15",
+    "0 0 -20",
+    "0 0 -25",
+    "0 0 -30",
+    "0 0 -35",
+  ];
+  const treePosition = [
+    "10 0 -5",
+    "10 0 -10",
+    "10 0 -15",
+    "10 0 -20",
+    "10 0 -25",
+    "10 0 -30",
+    "10 0 -35",
+    "-10 0 -5",
+    "-10 0 -10",
+    "-10 0 -15",
+    "-10 0 -20",
+    "-10 0 -25",
+    "-10 0 -30",
+    "-10 0 -35",
+  ];
+
+  const gedung = [
+    { gedung: "#gedung1", position: "-55 0 25", scale: "4 4 4" },
+    { gedung: "#gedung2", position: "-55 0 8", scale: "4 4 4" },
+    { gedung: "#gedung3", position: "-55 0 -8", scale: "4 4 4" },
+    { gedung: "#gedung4", position: "-55 0 -55", scale: "4 4 4" },
+    { gedung: "#gedung5", position: "55 -0.2 25", scale: "3 3 3" },
+    { gedung: "#gedung6", position: "55 -0.2 -10", scale: "3 3 3" },
+    { gedung: "#gedung7", position: "55 -0.2 -50", scale: "3 3 3" },
+  ];
   return (
     <>
       <a-assets>
@@ -17,222 +52,83 @@ export const FrontSide = () => {
         <a-asset-item id="gedung7" src="./models/gedung7.glb"></a-asset-item>
       </a-assets>
 
+      {lampionPosition.map((lampion) => (
+        <a-gltf-model
+          src="#lampion"
+          rotation="0 90 0"
+          scale="0.5 0.5 0.5"
+          position={lampion}
+        ></a-gltf-model>
+      ))}
       {/* lampion */}
-      <Entity
-        gltf-model="#lampion"
-        rotation="0 90 0"
-        scale="0.5 0.5 0.5"
-        position="0 0 -5"
-      />
-      <Entity
-        gltf-model="#lampion"
-        rotation="0 90 0"
-        scale="0.5 0.5 0.5"
-        position="0 0 -10"
-      />
-      <Entity
-        gltf-model="#lampion"
-        rotation="0 90 0"
-        scale="0.5 0.5 0.5"
-        position="0 0 -15"
-      />
-      <Entity
-        gltf-model="#lampion"
-        rotation="0 90 0"
-        scale="0.5 0.5 0.5"
-        position="0 0 -20"
-      />
-      <Entity
-        gltf-model="#lampion"
-        rotation="0 90 0"
-        scale="0.5 0.5 0.5"
-        position="0 0 -25"
-      />
-      <Entity
-        gltf-model="#lampion"
-        rotation="0 90 0"
-        scale="0.5 0.5 0.5"
-        position="0 0 -30"
-      />
-      <Entity
-        gltf-model="#lampion"
-        rotation="0 90 0"
-        scale="0.5 0.5 0.5"
-        position="0 0 -35"
-      />
+      {lampionPosition.map((lampion) => (
+        <a-gltf-model
+          src="#lampion"
+          rotation="0 90 0"
+          scale="0.5 0.5 0.5"
+          position={lampion}
+        ></a-gltf-model>
+      ))}
 
       {/* Pager */}
-      <Entity
-        gltf-model="#pager"
+      <a-gltf-model
+        src="#pager"
         rotation="0 90 0"
         scale="0.5 0.5 0.5"
         position="-5 0 -20"
-      />
-      <Entity
-        gltf-model="#pager"
+      ></a-gltf-model>
+      <a-gltf-model
+        src="#pager"
         rotation="0 90 0"
         scale="0.5 0.5 0.5"
         position="5 0 -20"
-      />
+      ></a-gltf-model>
 
       {/* Jalan */}
-      <Entity
-        primitive="a-box"
+      <a-box
         rotation="-90 0 0"
         scale="20 70 0.2"
         position="0 0 -4"
-        material={{ color: "black", opacity: 1 }}
-      />
-      <Entity
-        primitive="a-box"
+        color="black"
+      ></a-box>
+      <a-box
         rotation="-90 0 0"
         scale="80 10 0.2"
         position="0 0 30"
-        material={{ color: "black", opacity: 1 }}
-      />
-      <Entity
-        primitive="a-box"
+        color="black"
+      ></a-box>
+      <a-box
         rotation="-90 0 0"
         scale="10 80 0.2"
         position="35 0 -15"
-        material={{ color: "black", opacity: 1 }}
-      />
-      <Entity
-        primitive="a-box"
+        color="black"
+      ></a-box>
+      <a-box
         rotation="-90 0 0"
         scale="10 80 0.2"
         position="-35 0 -15"
-        material={{ color: "black", opacity: 1 }}
-      />
+        color="black"
+      ></a-box>
+
       {/* Pohon */}
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="10 0 0"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="10 0 -5"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="10 0 -10"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="10 0 -15"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="10 0 -20"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="10 0 -25"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="10 0 -30"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="-10 0 0"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="-10 0 -5"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="-10 0 -10"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="-10 0 -15"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="-10 0 -20"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="-10 0 -25"
-      />
-      <Entity
-        gltf-model="#pohon"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="-10 0 -30"
-      />
+      {treePosition.map((tree) => (
+        <a-gltf-model
+          src="#pohon"
+          rotation="0 90 0"
+          scale="4 4 4"
+          position={tree}
+        ></a-gltf-model>
+      ))}
 
       {/* gedung */}
-      <Entity
-        gltf-model="#gedung1"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="-55 0 25"
-      />
-      <Entity
-        gltf-model="#gedung2"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="-55 0 8"
-      />
-      <Entity
-        gltf-model="#gedung3"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="-55 0 -8"
-      />
-      <Entity
-        gltf-model="#gedung4"
-        rotation="0 90 0"
-        scale="4 4 4"
-        position="-55 0 -55"
-      />
-      <Entity
-        gltf-model="#gedung5"
-        rotation="0 -90 0"
-        scale="3 3 3"
-        position="55 -0.2 25"
-      />
-      <Entity
-        gltf-model="#gedung6"
-        rotation="0 -90 0"
-        scale="3 3 3"
-        position="55 -0.2 -10"
-      />
-      <Entity
-        gltf-model="#gedung7"
-        rotation="0 -90 0"
-        scale="3 3 3"
-        position="55 -0.2 -50"
-      />
+      {gedung.map((setGedung) => (
+        <a-gltf-model
+          src={setGedung.gedung}
+          rotation="0 90 0"
+          scale={setGedung.scale}
+          position={setGedung.position}
+        ></a-gltf-model>
+      ))}
     </>
   );
 };

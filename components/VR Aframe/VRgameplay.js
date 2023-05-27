@@ -8,35 +8,41 @@ import Head from "next/head";
 import ContentMuseum from "./Information Component/ContentMuseum";
 
 function VRgameplay() {
-  AFRAME.registerComponent("video-controls", {
-    init: function () {
-      var myVideo = document.querySelector("#profilePwk");
-      var videoControl = document.querySelector("#videoControls");
-      this.el.addEventListener("click", function () {
-        if (myVideo.paused) {
-          myVideo.play();
-          videoControl.setAttribute("src", "#pause");
-        } else {
-          myVideo.pause();
-          videoControl.setAttribute("src", "#play");
-        }
-      });
-    },
-  });
+  useEffect(() => {
+    AFRAME.registerComponent("video-controls", {
+      init: function () {
+        var myVideo = document.querySelector("#profilePwk");
+        var videoControl = document.querySelector("#videoControls");
+        this.el.addEventListener("click", function () {
+          if (myVideo.paused) {
+            myVideo.play();
+            videoControl.setAttribute("src", "#pause");
+          } else {
+            myVideo.pause();
+            videoControl.setAttribute("src", "#play");
+          }
+        });
+      },
+    });
+  }, []);
 
   const [musicControls, setMusicControls] = useState(false);
-  const musicRef = useRef(null);
+  const musicRef = useRef();
+  // var speaker = document.querySelector("#musicBg");
 
   const handlePlayMusic = () => {
-    musicRef.current.play();
+    musicRef.current.pause();
+    musicRef.currentTime = 0;
+
+    // speaker.components.sound.pauseSound();
     setMusicControls(true);
   };
 
   const handleStopMusic = () => {
     const music = musicRef.current;
-    music.pause();
-    music.currentTime = 0;
+    music.play();
     setMusicControls(false);
+    // speaker.components.sound.playSound();
   };
 
   return (
@@ -106,11 +112,13 @@ function VRgameplay() {
           <audio
             id="music"
             src="music/music.mp3"
-            ref={musicRef}
             loop="true"
             autoPlay
+            preload="auto"
+            ref={musicRef}
           ></audio>
         </a-assets>
+        <a-sound id="musicBg" src="src: #music; autoplay: true"></a-sound>
         <a-camera
           id="camera"
           look-controls="pointerLockEnabled:true"
