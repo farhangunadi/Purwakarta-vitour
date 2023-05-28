@@ -50,8 +50,16 @@ export const FrontSide = () => {
         <a-asset-item id="gedung5" src="./models/gedung5.glb"></a-asset-item>
         <a-asset-item id="gedung6" src="./models/gedung6.glb"></a-asset-item>
         <a-asset-item id="gedung7" src="./models/gedung7.glb"></a-asset-item>
+        <a-asset-item
+          id="gapura"
+          src="./models/gapuraWithoutWall.glb"
+        ></a-asset-item>
       </a-assets>
-
+      <a-gltf-model
+        src="#gapura"
+        rotation="0 90 0"
+        position="0 0 4"
+      ></a-gltf-model>
       {lampionPosition.map((lampion) => (
         <a-gltf-model
           src="#lampion"

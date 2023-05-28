@@ -136,7 +136,9 @@
   padding: 20px;
   border-radius: 5px;
 }
-
+.menu1 {
+  font-family: "Poppins";
+}
 .close {
   position: absolute;
   top: 5px;
@@ -237,12 +239,16 @@
   }
   .content_text,
   .content_desc {
-    margin-top: 10px;
+    margin: 10px 5px;
   }
   .content_text {
     font-size: 20px;
   }
   .content_desc {
     font-size: 14px;
+  }
+  .containerCarousel {
+    /* padding: 0 !important; */
+    max-width: 250px !important;
   }
 }

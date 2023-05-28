@@ -47,8 +47,9 @@ function SplashScreen() {
             1. Pastikan koneksi internet yang anda gunakan stabil <br></br>
             2. Untuk dapat menjalankan 'virtual cursor', klik kiri pada layar.{" "}
             <br></br>
-            3. Virtual cursor berbentuk lingkaran merah di tengah layar 4.
-            Gunakan pergerakan mouse untuk navigasi arah kamera. <br></br>
+            3. Virtual cursor berbentuk lingkaran merah di tengah layar.
+            <br></br> 4. Gunakan pergerakan mouse untuk navigasi arah kamera.{" "}
+            <br></br>
             5. Tekan tombol 'Esc' pada keyboard untuk keluar dari virtual
             reality. <br></br>
             6. Arahkan 'virtual cursor' untuk melakukan suatu event (click,

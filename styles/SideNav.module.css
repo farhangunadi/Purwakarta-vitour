@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+.container {
+  position: relative;
+}
+.SideNavBtn {
+  background-color: #100244;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  padding: 10px;
+  color: white;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: normal;
+  z-index: 3;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0px;
+}
+.SideNav {
+  background-color: #100244;
+  position: absolute;
+  top: 70px;
+  left: 5px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: normal;
+  z-index: 3;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+}
+.SideNav ul {
+  padding: 5px 25px;
+}
+.SideNav ul li {
+  list-style: none;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #493497de;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 0px;
+}
+.SideNav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.SideNav ul li:hover {
+  background-color: #321697de;
+}
+.petunjuk {
+  background-color: transparent;
+  color: white;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  max-width: 1240px;
+  height: fit-content;
+  background-color: #100244e8;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.popup-content {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+.content {
+  max-width: 100%;
+  margin: 0;
+  display: block;
+  gap: 1rem;
+  padding: 10px;
+  overflow: auto;
+  height: fit-content;
+  /* padding: 20px 10px 0 20px; */
+  padding: 20px;
+}
+.desc_content {
+  max-width: 100%;
+}
+.content_text,
+.content_desc {
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 12px;
+  font-family: "Poppins";
+}
+.content_text {
+  font-size: 20px;
+  font-weight: bold;
+}
+.content_desc {
+  font-size: 12px;
+  line-height: auto;
+  text-align: justify;
+}
+.image_content {
+  width: 800px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+@media only screen and (max-width: 769px) {
+  .SideNavBtn {
+    font-size: 15px;
+  }
+  .SideNav {
+    top: 57px;
+    font-size: 12px;
+  }
+  .SideNav ul {
+    padding: 5px 15px;
+  }
+  .popup {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 95%;
+  }
+  .content {
+    overflow: auto;
+    height: 400px;
+    padding: 10px;
+    max-width: 100%;
+  }
+  .petunjuk {
+    margin-left: 15px;
+  }
+}

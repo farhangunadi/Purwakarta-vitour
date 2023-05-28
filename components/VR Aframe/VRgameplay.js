@@ -6,6 +6,7 @@ import styles from "../../styles/Gameplay.module.css";
 import * as THREE from "three";
 import Head from "next/head";
 import ContentMuseum from "./Information Component/ContentMuseum";
+import { SideBarNav } from "./SideBarNav/SideBarNav";
 
 function VRgameplay() {
   useEffect(() => {
@@ -50,10 +51,10 @@ function VRgameplay() {
       <Head>
         <script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"></script>
       </Head>
-
-      <a className={styles.backBtn} href="/mainmenu">
+      <SideBarNav />
+      {/* <a className={styles.backBtn} href="/mainmenu">
         Back to Homepage
-      </a>
+      </a> */}
       {musicControls ? (
         <Image
           width="100"
@@ -77,6 +78,7 @@ function VRgameplay() {
         id="scene"
         reflection="directionalLight:a-light#dirlight;"
         joystick
+        loading-screen="dotsColor: #24EFAD; backgroundColor: #100244"
       >
         <a-assets>
           <a-asset-item
@@ -118,7 +120,7 @@ function VRgameplay() {
             ref={musicRef}
           ></audio>
         </a-assets>
-        <a-sound id="musicBg" src="src: #music; autoplay: true"></a-sound>
+        <a-entity id="musicBg" src="src: #music; autoplay: true"></a-entity>
         <a-camera
           id="camera"
           look-controls="pointerLockEnabled:true"
