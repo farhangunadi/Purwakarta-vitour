@@ -23,8 +23,8 @@ function SplashScreen() {
         <div className={styles.btn_wrap}>
           <button
             style={{
-              backgroundColor: guide === 1 ? "#E1CD8A" : "#4c3d3d",
-              color: guide == 1 ? "#4c3d3d" : "",
+              backgroundColor: guide === 1 ? "#15D3A0" : "#352D8B",
+              color: guide == 1 ? "#221333" : "",
             }}
             onClick={() => handleGuideVersion(1)}
             className={styles.btn_guide}
@@ -33,8 +33,8 @@ function SplashScreen() {
           </button>
           <button
             style={{
-              backgroundColor: guide === 2 ? "#E1CD8A" : "#4c3d3d",
-              color: guide == 2 ? "#4c3d3d" : "",
+              backgroundColor: guide === 2 ? "#15D3A0" : "#352D8B",
+              color: guide == 2 ? "#221333" : "",
             }}
             onClick={() => handleGuideVersion(2)}
             className={styles.btn_guide}
