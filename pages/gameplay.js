@@ -7,15 +7,16 @@ const VRgameplay = dynamic(() => import("../components/VR Aframe/VRgameplay"), {
 });
 
 function Gameplay() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate a loading delay
-    setTimeout(() => {
-      setLoading(false);
-    }, 5000); // Replace this with your actual loading logic
-  }, []);
-  return <>{loading ? <LoadingScreen /> : <VRgameplay />}</>;
+  // useEffect(() => {
+  //   // Simulate a loading delay
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 7000); // Replace this with your actual loading logic
+  // }, []);
+  // return <>{loading ? <LoadingScreen /> : <VRgameplay />}</>;
+  return <VRgameplay />;
 }
 
 export default Gameplay;

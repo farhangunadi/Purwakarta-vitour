@@ -89,3 +89,16 @@
     right: 100%;
   }
 }
+
+@media only screen and (max-width: 769px) {
+  .container {
+    left: 7em;
+    width: 50%;
+  }
+  .bar {
+    width: 200px;
+  }
+  .loadingText {
+    right: 3px;
+  }
+}

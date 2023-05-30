@@ -7,7 +7,7 @@ import * as THREE from "three";
 import Head from "next/head";
 import ContentMuseum from "./Information Component/ContentMuseum";
 import { SideBarNav } from "./SideBarNav/SideBarNav";
-
+import Script from "next/script";
 function VRgameplay() {
   useEffect(() => {
     AFRAME.registerComponent("video-controls", {
@@ -52,10 +52,11 @@ function VRgameplay() {
       audio.loop = false; // Disable looping
     });
   };
+
   return (
     <>
       <Head>
-        <script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"></script>
+        <Script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js" />
       </Head>
       <SideBarNav />
       {/* <a className={styles.backBtn} href="/mainmenu">
@@ -81,6 +82,7 @@ function VRgameplay() {
         />
       )}
       <a-scene
+        debug
         id="scene"
         reflection="directionalLight:a-light#dirlight;"
         joystick
@@ -129,7 +131,7 @@ function VRgameplay() {
           <audio id="voiceOver" src="music/voiceOver.mp3" autoPlay></audio>
         </a-assets>
         <a-entity id="musicBg" src="src: #music; autoplay: true;"></a-entity>
-        <a-sound id="voice_over" src="src: #voiceOver;"></a-sound>
+        <a-sound id="voice_over" src="#voiceOver;"></a-sound>
         <a-camera
           id="camera"
           look-controls="pointerLockEnabled:true"
