@@ -102,15 +102,10 @@ function WisataVR() {
             preload="auto"
             ref={musicRef}
           ></audio>
-          <audio
-            id="voiceOver"
-            src="music/voiceOver.mp3"
-            autoPlay
-            loop="false"
-          ></audio>
+          <audio id="voiceOver" src="music/voiceOver.mp3" autoPlay></audio>
         </a-assets>
         <a-entity id="musicBg" src="src: #music; autoplay: true"></a-entity>
-        <a-sound id="voice_over" src="#voiceOver;"></a-sound>
+        <a-entity id="voice_over" src="src: #voiceOver;"></a-entity>
         <a-sky
           id="image-360"
           radius="200"
