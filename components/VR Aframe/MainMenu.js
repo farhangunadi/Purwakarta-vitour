@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import AFRAME from "aframe";
 import * as THREE from "three";
 import Head from "next/head";
-import { Entity } from "aframe-react";
-import styles from "../../styles/Gameplay.module.css";
 
 function MainMenu() {
   // AFRAME.registerComponent("hello-world", {
@@ -21,12 +19,14 @@ function MainMenu() {
     init: function () {
       var data = this.data;
       var el = this.el;
+      var audio = document.querySelector("#voiceOver");
 
       el.addEventListener("click", function () {
         data.source.setAttribute("visible", false);
         data.target1.setAttribute("visible", true);
         data.target2.setAttribute("visible", true);
       });
+      el.addEventListener("mouseenter", function () {});
     },
   });
   AFRAME.registerComponent("navigate-on-click", {
@@ -48,7 +48,7 @@ function MainMenu() {
       <Head>
         <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
       </Head>
-      <a-scene>
+      <a-scene loading-screen="dotsColor: #24EFAD; backgroundColor: #100244">
         <a-light type="ambient" color="#222222" intensity="0.3"></a-light>
         <a-light
           type="directional"
@@ -82,7 +82,7 @@ function MainMenu() {
           <img id="tourist" src="images/universe (2).png" />
           <img id="nightSky" src="images/nightSky.png" />
           <img id="stones" src="images/texture/stones.jpg" />
-
+          <audio id="click" src="music/clik.mp3" autoPlay></audio>
           <a-asset-item id="gapura" src="./models/gapura.glb"></a-asset-item>
         </a-assets>
         <a-gltf-model

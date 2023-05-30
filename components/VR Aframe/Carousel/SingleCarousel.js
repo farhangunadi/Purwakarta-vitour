@@ -47,9 +47,11 @@ export const SingleCarousel = () => {
             />
             <h1 className={styles.content_text}>Movement/Pergerakan Pemain</h1>
             <h3 className={styles.content_desc}>
-              Pada versi desktop gunakan keyboard untuk bergerak, tekan 'W'
+              1. Pada versi desktop gunakan keyboard untuk bergerak, tekan 'W'
               untuk maju, tekan 'S' untuk mundur, tekan 'D' untuk bergerak ke
-              kanan, dan tekan 'A' untuk bergerak ke kiri
+              kanan, dan tekan 'A' untuk bergerak ke kiri.<br></br>2.Pada versi
+              mobile, tekan dan tahan joystick yang terdapat di pojok kanan
+              bawah serta arahkan sesuai keinginan.
             </h3>
           </div>
           <div>

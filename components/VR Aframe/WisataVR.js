@@ -25,6 +25,14 @@ function WisataVR() {
     setMusicControls(false);
     // speaker.components.sound.playSound();
   };
+  const loopMusic = () => {
+    var audio = document.querySelector("#voiceOver");
+
+    audio.addEventListener("loadedmetadata", function () {
+      audio.loop = false; // Disable looping
+    });
+  };
+
   return (
     <>
       <Head>
@@ -88,15 +96,16 @@ function WisataVR() {
           ></img>
           <audio
             id="music"
-            src="music/music.mp3"
+            src="music/EMKA9-Girimis.mp3"
             loop="true"
             autoPlay
             preload="auto"
             ref={musicRef}
           ></audio>
+          <audio id="voiceOver" src="music/voiceOver.mp3" autoPlay></audio>
         </a-assets>
         <a-entity id="musicBg" src="src: #music; autoplay: true"></a-entity>
-
+        <a-sound id="voice_over" src="src: #voiceOver;"></a-sound>
         <a-sky
           id="image-360"
           radius="200"

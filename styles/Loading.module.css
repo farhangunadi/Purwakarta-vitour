@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+.superContainer {
+  background: #100637;
+  height: 100vh;
+  position: relative;
+}
+.container {
+  background: #100637;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  top: 13em;
+}
+
+.bar {
+  position: relative;
+  height: 2px;
+  width: 500px;
+  margin: 0 auto;
+  background: #b6ffe7;
+  margin-top: 150px;
+}
+
+.circle {
+  position: absolute;
+  top: -30px;
+  margin-left: -30px;
+  height: 60px;
+  width: 60px;
+  left: 0;
+  background: #b6ffe7;
+  border-radius: 30%;
+  animation: move 5s infinite;
+  -webkit-animation: move 5s infinite; /* Safari and Chrome */
+  -moz-animation: move 5s infinite; /* Firefox */
+  -o-animation: move 5s infinite; /* Opera */
+}
+
+.loadingText {
+  position: absolute;
+  top: -24px;
+  right: -83px;
+  text-transform: uppercase;
+  color: #100637;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+    transform: rotate(450deg);
+    width: 150px;
+    height: 150px;
+  }
+  75% {
+    left: 100%;
+    transform: rotate(450deg);
+    width: 150px;
+    height: 150px;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+    -webkit-transform: rotate(450deg);
+    width: 150px;
+    height: 150px;
+  }
+  75% {
+    left: 100%;
+    -webkit-transform: rotate(450deg);
+    width: 150px;
+    height: 150px;
+  }
+  100% {
+    right: 100%;
+  }
+}

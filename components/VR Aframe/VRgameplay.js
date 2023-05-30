@@ -45,7 +45,13 @@ function VRgameplay() {
     setMusicControls(false);
     // speaker.components.sound.playSound();
   };
+  const loopMusic = () => {
+    var audio = document.querySelector("#voiceOver");
 
+    audio.addEventListener("loadedmetadata", function () {
+      audio.loop = false; // Disable looping
+    });
+  };
   return (
     <>
       <Head>
@@ -79,6 +85,7 @@ function VRgameplay() {
         reflection="directionalLight:a-light#dirlight;"
         joystick
         loading-screen="dotsColor: #24EFAD; backgroundColor: #100244"
+        audio-controller
       >
         <a-assets>
           <a-asset-item
@@ -91,7 +98,7 @@ function VRgameplay() {
           ></a-asset-item>
           <a-asset-item
             id="frontMuseum"
-            src="./models/FrontMuseum.glb"
+            src="./models/FrontMuseum2.glb"
           ></a-asset-item>
           <a-asset-item
             id="sideMuseum"
@@ -113,14 +120,16 @@ function VRgameplay() {
           <video id="profilePwk" src="video/profil_pwk.mp4" loop="true" />
           <audio
             id="music"
-            src="music/music.mp3"
+            src="music/EMKA9-Girimis.mp3"
             loop="true"
             autoPlay
             preload="auto"
             ref={musicRef}
           ></audio>
+          <audio id="voiceOver" src="music/voiceOver.mp3" autoPlay></audio>
         </a-assets>
-        <a-entity id="musicBg" src="src: #music; autoplay: true"></a-entity>
+        <a-entity id="musicBg" src="src: #music; autoplay: true;"></a-entity>
+        <a-sound id="voice_over" src="src: #voiceOver;"></a-sound>
         <a-camera
           id="camera"
           look-controls="pointerLockEnabled:true"

@@ -6,7 +6,7 @@ import { SingleCarousel } from "../Carousel/SingleCarousel";
 export const SideBarNav = () => {
   const [openBar, setOpenBar] = useState(false);
   const [icon, setIcon] = useState(false);
-  const [petunjuk, setPetunjuk] = useState(false);
+  const [petunjuk, setPetunjuk] = useState(true);
   const handleOpenSideNav = () => {
     setOpenBar(true);
     setIcon(true);

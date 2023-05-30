@@ -1,12 +1,17 @@
 import React from "react";
-import SplashScreen from "../components/VR Aframe/Splash Screen/SplashScreen";
 import { Head } from "next/document";
+import App from "next/app";
+import "../styles/styles.css";
 
-function MyApp({ Component, pageProps }) {
-  //   <Head>
-  //     <link rel="stylesheet" href="/styles/global.css" />
-  //   </Head>;
-  return <Component {...pageProps} />;
+class _App extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <div style={{ margin: 0 }}>
+        <Component {...pageProps} />
+      </div>
+    );
+  }
 }
 
-export default MyApp;
+export default _App;
