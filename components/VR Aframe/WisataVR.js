@@ -81,7 +81,7 @@ function WisataVR() {
           ></a-asset-item>
           <a-asset-item
             id="wadukJatiluhur"
-            src="./models/wadukjatiluhur.glb"
+            src="./models/wadukJatiluhur.glb"
           ></a-asset-item>
           <a-asset-item id="pendopo" src="./models/pendopo.glb"></a-asset-item>
           <a-asset-item
@@ -102,10 +102,15 @@ function WisataVR() {
             preload="auto"
             ref={musicRef}
           ></audio>
-          <audio id="voiceOver" src="music/voiceOver.mp3" autoPlay></audio>
+          <audio
+            id="voiceOver"
+            src="music/voiceOver.mp3"
+            autoPlay
+            loop="false"
+          ></audio>
         </a-assets>
         <a-entity id="musicBg" src="src: #music; autoplay: true"></a-entity>
-        <a-sound id="voice_over" src="src: #voiceOver;"></a-sound>
+        <a-sound id="voice_over" src="#voiceOver;"></a-sound>
         <a-sky
           id="image-360"
           radius="200"

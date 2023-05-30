@@ -44,6 +44,7 @@ export const SingleCarousel = () => {
               alt="img"
               width="600"
               height="600"
+              priority={true}
             />
             <h1 className={styles.content_text}>Movement/Pergerakan Pemain</h1>
             <h3 className={styles.content_desc}>
