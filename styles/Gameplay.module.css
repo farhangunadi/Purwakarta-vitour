@@ -201,6 +201,7 @@
   font-size: 12px;
   line-height: auto;
   text-align: justify;
+  font-weight: 200;
 }
 
 /* soundcomponent */
@@ -242,13 +243,13 @@
     margin: 10px 5px;
   }
   .content_text {
-    font-size: 20px;
+    font-size: 18px;
   }
   .content_desc {
-    font-size: 14px;
+    font-size: 12px;
   }
   .containerCarousel {
     /* padding: 0 !important; */
-    max-width: 250px !important;
+    max-width: 300px !important;
   }
 }
