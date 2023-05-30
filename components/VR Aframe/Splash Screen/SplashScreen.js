@@ -65,7 +65,8 @@ function SplashScreen() {
             3. Arahkan gawai 360 derajat kanan kiri atas bawah untuk navigasi
             kamera.<br></br>
             4. Untuk melakukan suatu event (klik, hover, dan lain lain) arahkan
-            terlebih dahulu cursor ke objek lalu klik menggunakan jari.<br></br>
+            terlebih dahulu cursor ke objek lalu tunggu beberapa saat dengan
+            cursor tetap pada objek.<br></br>
             5. Untuk melakukan pergerakan, gunakan joystick yang berada di pojok
             kanan bawah.<br></br>
             6. Disarankan gawai berposisi landscape untuk memaksimalkan navigasi

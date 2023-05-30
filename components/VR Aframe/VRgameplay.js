@@ -56,7 +56,7 @@ function VRgameplay() {
   return (
     <>
       <Head>
-        <Script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js" />
+        <script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"></script>
       </Head>
       <SideBarNav />
       {/* <a className={styles.backBtn} href="/mainmenu">

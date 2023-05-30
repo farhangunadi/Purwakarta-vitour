@@ -104,7 +104,7 @@
 .play_button:hover {
   transform: scale(1.05);
 }
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 426px) {
   .splash_desc {
     width: 80%;
     font-size: 12px;
