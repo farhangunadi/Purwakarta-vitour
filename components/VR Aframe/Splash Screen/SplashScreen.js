@@ -45,33 +45,37 @@ function SplashScreen() {
         {guide == 1 ? (
           <div className={styles.guide} id="desktop_guide">
             1. Pastikan koneksi internet yang anda gunakan stabil <br></br>
-            2. Untuk dapat menjalankan 'virtual cursor', klik kiri pada layar.{" "}
+            2. Website ini berisi konten multimedia, oleh sebab itu mungkin akan
+            memakan sedikit waktu untuk masuk ke websitenya.<br></br>
+            3. Untuk dapat menjalankan 'virtual cursor', klik kiri pada layar.{" "}
             <br></br>
-            3. Virtual cursor berbentuk lingkaran merah di tengah layar.
-            <br></br> 4. Gunakan pergerakan mouse untuk navigasi arah kamera.{" "}
+            4. Virtual cursor berbentuk lingkaran merah di tengah layar.
+            <br></br> 5. Gunakan pergerakan mouse untuk navigasi arah kamera.{" "}
             <br></br>
-            5. Tekan tombol 'Esc' pada keyboard untuk keluar dari virtual
+            6. Tekan tombol 'Esc' pada keyboard untuk keluar dari virtual
             reality. <br></br>
-            6. Arahkan 'virtual cursor' untuk melakukan suatu event (click,
+            7. Arahkan 'virtual cursor' untuk melakukan suatu event (click,
             hover, dan lain lain). <br></br>
-            7. Tekan tombol 'F' pada keyboard untuk full screen. <br></br>
-            8. Selamat Berpetualang!
+            8. Tekan tombol 'F' pada keyboard untuk full screen. <br></br>
+            9. Selamat Berpetualang!
           </div>
         ) : (
           <div className={styles.guide} id="mobile_guide">
             1. Pastikan koneksi internet yang anda gunakan stabil.<br></br>
-            2. Virtual cursor akan otomatis berfungsi untuk versi mobile.
+            2. Website ini berisi konten multimedia,oleh sebab itu mungkin akan
+            memakan sedikit waktu untuk masuk ke websitenya.<br></br>
+            3. Virtual cursor akan otomatis berfungsi untuk versi mobile.
             <br></br>
-            3. Arahkan gawai 360 derajat kanan kiri atas bawah untuk navigasi
+            4. Arahkan gawai 360 derajat kanan kiri atas bawah untuk navigasi
             kamera.<br></br>
-            4. Untuk melakukan suatu event (klik, hover, dan lain lain) arahkan
+            5. Untuk melakukan suatu event (klik, hover, dan lain lain) arahkan
             terlebih dahulu cursor ke objek lalu tunggu beberapa saat dengan
             cursor tetap pada objek.<br></br>
-            5. Untuk melakukan pergerakan, gunakan joystick yang berada di pojok
+            6. Untuk melakukan pergerakan, gunakan joystick yang berada di pojok
             kanan bawah.<br></br>
-            6. Disarankan gawai berposisi landscape untuk memaksimalkan navigasi
+            7. Disarankan gawai berposisi landscape untuk memaksimalkan navigasi
             kamera.<br></br>
-            7. Selamat Berpetualang!.<br></br>
+            8. Selamat Berpetualang!.<br></br>
           </div>
         )}
         <a className={styles.play_button} href="/mainmenu">
