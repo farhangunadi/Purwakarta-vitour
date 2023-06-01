@@ -221,7 +221,7 @@ function VRgameplay() {
         ></a-gltf-model>
         <a-entity>
           <a-box
-            position="-0.3 4.5 -110.53"
+            position="-0.3 4.5 -111"
             color="#432F2F"
             width="8"
             height="4.5"
