@@ -183,7 +183,7 @@ function ContentMuseum() {
           <a-text
             position={data.textPosition}
             rotation={data.rotation}
-            value="Click for Info"
+            value="Tekan untuk info"
             align="center"
           ></a-text>
           {showPopup && (

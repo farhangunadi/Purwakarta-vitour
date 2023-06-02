@@ -63,7 +63,7 @@ export const SingleCarousel = () => {
               width="600"
               height="600"
             />
-            <h1 className={styles.content_text}>Inspect Object</h1>
+            <h1 className={styles.content_text}>Lihat detail objek</h1>
             <h3 className={styles.content_desc}>
               1. Pada versi desktop, arahkan cursor ke objek yang dapat yang
               bertuliskan dapat di klik, lalu klik objek. <br></br>2. Pada versi

@@ -127,7 +127,7 @@ function MainMenu() {
             show-and-remove-on-click="source: #menuContainer; target1: #museum; target2: #touristTour;"
           ></a-box>
           <a-entity
-            text="font: mozillavr; value: Play; align:center;width: 4;height:2"
+            text="font: mozillavr; value: Mulai; align:center;width: 4;height:2"
             position=" 1.2 2.9 -2.4"
             color="#fffff"
           ></a-entity>
