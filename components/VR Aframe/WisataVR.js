@@ -108,7 +108,7 @@ function WisataVR() {
         <a-entity id="voice_over" src="src: #voiceOver;"></a-entity>
         <a-sky
           id="image-360"
-          radius="200"
+          radius="300"
           src="#sechelt"
           data-set-image-fade-setup="true"
           animation__fade=""
@@ -173,7 +173,7 @@ function WisataVR() {
         <a-gltf-model
           src="#gnParang"
           rotation="0 90 0"
-          position="-70 -1.2 -160"
+          position="-70 -1.1 -160"
           scale="5 5 5"
         ></a-gltf-model>
         <Entity

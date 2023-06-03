@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AFRAME from "aframe";
 import * as THREE from "three";
 import Head from "next/head";
@@ -9,39 +9,41 @@ function MainMenu() {
   //     console.log("Hello, World!");
   //   },
   // });
-  AFRAME.registerComponent("show-and-remove-on-click", {
-    schema: {
-      source: { type: "selector" },
-      target1: { type: "selector" },
-      target2: { type: "selector" },
-    },
+  useEffect(() => {
+    AFRAME.registerComponent("show-and-remove-on-click", {
+      schema: {
+        source: { type: "selector" },
+        target1: { type: "selector" },
+        target2: { type: "selector" },
+      },
 
-    init: function () {
-      var data = this.data;
-      var el = this.el;
-      var audio = document.querySelector("#voiceOver");
+      init: function () {
+        var data = this.data;
+        var el = this.el;
+        var audio = document.querySelector("#voiceOver");
 
-      el.addEventListener("click", function () {
-        data.source.setAttribute("visible", false);
-        data.target1.setAttribute("visible", true);
-        data.target2.setAttribute("visible", true);
-      });
-      el.addEventListener("mouseenter", function () {});
-    },
-  });
-  AFRAME.registerComponent("navigate-on-click", {
-    schema: {
-      url: { default: "" },
-    },
-    init: function () {
-      var data = this.data;
-      var el = this.el;
+        el.addEventListener("click", function () {
+          data.source.setAttribute("visible", false);
+          data.target1.setAttribute("visible", true);
+          data.target2.setAttribute("visible", true);
+        });
+        el.addEventListener("mouseenter", function () {});
+      },
+    });
+    AFRAME.registerComponent("navigate-on-click", {
+      schema: {
+        url: { default: "" },
+      },
+      init: function () {
+        var data = this.data;
+        var el = this.el;
 
-      el.addEventListener("touchstart", function () {
-        window.location.href = data.url;
-      });
-    },
-  });
+        el.addEventListener("touchstart", function () {
+          window.location.href = data.url;
+        });
+      },
+    });
+  }, []);
 
   return (
     <>
@@ -166,6 +168,10 @@ function MainMenu() {
         <a-entity id="link-to-world">
           {/* <a-entity link="href: /gemplay; title: Museum Tour; image: #gameplay"></a-entity>
           <a-entity link="href: /tourist; title: Tourist Tour; image: #tourist"></a-entity> */}
+          <a-entity
+            text="value:Pilih Lokasi Tour;align:center;width: 4;height:2"
+            position="0 5 -3"
+          ></a-entity>
           <a-link
             id="museum"
             highlighted="true"

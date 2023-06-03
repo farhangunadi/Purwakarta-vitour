@@ -119,7 +119,13 @@ function VRgameplay() {
           <img id="play" src="images/play.png" />
           <img id="pause" src="images/pause.png" />
           <img id="env" src="images/ehingen_hillside_2k.jpg" />
-          <video id="profilePwk" src="video/profil_pwk.mp4" loop="true" />
+          <video
+            id="profilePwk"
+            src="video/profil_pwk.mp4"
+            loop="true"
+            crossorigin
+            playsinline
+          />
           <audio
             id="music"
             src="music/EMKA9-Girimis.mp3"

@@ -70,7 +70,7 @@ function ContentMuseum() {
       title: "Curug Cijalu",
       content:
         "Curug Cijalu berada di kawasan Cagar Alam Gunung Burangrang, maka tak heran jika udaranya sangat sejuk. Ketinggian Curug Cijalu sekitar 70 meter menjulang tinggi ke atas, dengan debit air yang tidak terlalu deras. Curug Cijalu mulai diresmikan dan dibuka untuk umum sejak tanggal 1 September tahun 1984. Untuk menuju lokasi Curug Cijalu kamu harus berjalan kaki sejauh 300 meter dari tempat parkir, dengan trekking yang dibilang mudah meskipun jalannya masih berbatu dan berundak-undak. Meskipun begitu kamu akan disuguhi pemandangan yang luar biasa. Tiket masuk Curug Cijalu dibedakan menjadi tiket orang dan tiket kendaraan. Tiket masuk orang sebesar Rp. 17.500,- per orang",
-      image: "/images/fotoContent/",
+      image: "/images/fotoContent/curugCijalu.jpg",
 
       boxPosition: "-5.2 1 -85.2",
       textPosition: "-5.1 1 -85.2",
