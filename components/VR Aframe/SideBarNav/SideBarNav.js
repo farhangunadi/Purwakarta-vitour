@@ -47,13 +47,6 @@ export const SideBarNav = () => {
                   </h1>
                 </div>
                 <SingleCarousel />
-                {/* <Image
-                  className={styles.image_content}
-                  src="/images/guide.png"
-                  alt="img"
-                  width="300"
-                  height="300"
-                /> */}
               </div>
             </div>
           </div>

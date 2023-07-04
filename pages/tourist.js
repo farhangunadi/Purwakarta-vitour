@@ -13,7 +13,7 @@ export default function tourist() {
     // Simulate a loading delay
     setTimeout(() => {
       setLoading(false);
-    }, 7000); // Replace this with your actual loading logic
+    }, 7000);
   }, []);
   return <>{loading ? <LoadingScreen /> : <WisataVR />}</>;
 }
