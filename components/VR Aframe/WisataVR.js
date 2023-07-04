@@ -5,6 +5,7 @@ import Head from "next/head";
 import { Entity } from "aframe-react";
 import styles from "../../styles/Gameplay.module.css";
 import { SideBarNav } from "./SideBarNav/SideBarNav";
+import { AiFillCaretUp, AiFillCaretDown } from "react-icons/ai";
 
 function WisataVR() {
   const [musicControls, setMusicControls] = useState(false);
@@ -33,6 +34,91 @@ function WisataVR() {
     });
   };
 
+  useEffect(() => {
+    AFRAME.registerComponent("camera-updown", {
+      init: function () {
+        // Define camera movement limits
+        var minHeight = 1.6;
+        var maxHeight = 5;
+
+        // Initialize variables
+        var isMovingUp = false;
+        var isMovingDown = false;
+
+        var cameraEl = this.el;
+        var currentPosition = cameraEl.getAttribute("position");
+
+        // Get the up button element
+        var upButton = document.getElementById("upButton");
+
+        // Get the down button element
+        var downButton = document.getElementById("downButton");
+
+        // Keydown event listener for 'z' key
+        window.addEventListener("keydown", function (event) {
+          if (event.key === "z") {
+            if (currentPosition.y < maxHeight) {
+              cameraEl.setAttribute("position", {
+                x: currentPosition.x,
+                y: currentPosition.y + 0.1,
+                z: currentPosition.z,
+              });
+            }
+          }
+        });
+
+        // Keyup event listener for 'z' key
+        window.addEventListener("keyup", function (event) {
+          if (event.key === "z") {
+            isMovingUp = false;
+          }
+        });
+
+        // Keydown event listener for 'x' key
+        window.addEventListener("keydown", function (event) {
+          if (event.key === "x") {
+            if (currentPosition.y > minHeight) {
+              cameraEl.setAttribute("position", {
+                x: currentPosition.x,
+                y: currentPosition.y - 0.1,
+                z: currentPosition.z,
+              });
+            }
+          }
+        });
+
+        // Keyup event listener for 'x' key
+        window.addEventListener("keyup", function (event) {
+          if (event.key === "x") {
+            isMovingDown = false;
+          }
+        });
+
+        upButton.addEventListener("touchstart", function () {
+          // Move camera up
+          if (currentPosition.y < maxHeight) {
+            cameraEl.setAttribute("position", {
+              x: currentPosition.x,
+              y: currentPosition.y + 0.1,
+              z: currentPosition.z,
+            });
+          }
+        });
+        // Mouse events for the down button
+        downButton.addEventListener("touchstart", function () {
+          // Move camera down
+          if (currentPosition.y > minHeight) {
+            cameraEl.setAttribute("position", {
+              x: currentPosition.x,
+              y: currentPosition.y - 0.1,
+              z: currentPosition.z,
+            });
+          }
+        });
+      },
+    });
+  }, []);
+
   return (
     <>
       <Head>
@@ -57,6 +143,12 @@ function WisataVR() {
           alt="playMusicIcon"
         />
       )}
+      <button id="upButton" className={styles.btnUp}>
+        <AiFillCaretUp />
+      </button>
+      <button id="downButton" className={styles.btnDown}>
+        <AiFillCaretDown />
+      </button>
       <SideBarNav />
       <a-scene
         joystick
@@ -67,6 +159,7 @@ function WisataVR() {
           look-controls="pointerLockEnabled:true"
           position="0 1.6 0"
           wasd-controls="acceleration: 40"
+          camera-updown
         >
           <a-cursor material="color: red; shader: flat"></a-cursor>
         </a-camera>

@@ -3,11 +3,10 @@ import AFRAME from "aframe";
 import { FrontSide } from "./FrontSide";
 import Image from "next/image";
 import styles from "../../styles/Gameplay.module.css";
-import * as THREE from "three";
 import Head from "next/head";
 import ContentMuseum from "./Information Component/ContentMuseum";
 import { SideBarNav } from "./SideBarNav/SideBarNav";
-import Script from "next/script";
+import { AiFillCaretUp, AiFillCaretDown } from "react-icons/ai";
 function MuseumTour() {
   useEffect(() => {
     AFRAME.registerComponent("video-controls", {
@@ -25,7 +24,7 @@ function MuseumTour() {
         });
       },
     });
-    AFRAME.registerComponent("custom-controls", {
+    AFRAME.registerComponent("camera-updown", {
       init: function () {
         // Define camera movement limits
         var minHeight = 1.6;
@@ -37,6 +36,12 @@ function MuseumTour() {
 
         var cameraEl = this.el;
         var currentPosition = cameraEl.getAttribute("position");
+
+        // Get the up button element
+        var upButton = document.getElementById("upButton");
+
+        // Get the down button element
+        var downButton = document.getElementById("downButton");
 
         // Keydown event listener for 'z' key
         window.addEventListener("keydown", function (event) {
@@ -75,6 +80,28 @@ function MuseumTour() {
         window.addEventListener("keyup", function (event) {
           if (event.key === "x") {
             isMovingDown = false;
+          }
+        });
+
+        upButton.addEventListener("touchstart", function () {
+          // Move camera up
+          if (currentPosition.y < maxHeight) {
+            cameraEl.setAttribute("position", {
+              x: currentPosition.x,
+              y: currentPosition.y + 0.1,
+              z: currentPosition.z,
+            });
+          }
+        });
+        // Mouse events for the down button
+        downButton.addEventListener("touchstart", function () {
+          // Move camera down
+          if (currentPosition.y > minHeight) {
+            cameraEl.setAttribute("position", {
+              x: currentPosition.x,
+              y: currentPosition.y - 0.1,
+              z: currentPosition.z,
+            });
           }
         });
       },
@@ -136,6 +163,12 @@ function MuseumTour() {
           alt="playMusicIcon"
         />
       )}
+      <button id="upButton" className={styles.btnUp}>
+        <AiFillCaretUp />
+      </button>
+      <button id="downButton" className={styles.btnDown}>
+        <AiFillCaretDown />
+      </button>
       <a-scene
         debug
         id="scene"
@@ -201,7 +234,7 @@ function MuseumTour() {
           position="0 1.6 10"
           rotation="0 90 0"
           wasd-controls="acceleration: 40"
-          custom-controls
+          camera-updown
         >
           <a-cursor material="color: red; shader: flat"></a-cursor>
         </a-camera>
