@@ -25,6 +25,60 @@ function MuseumTour() {
         });
       },
     });
+    AFRAME.registerComponent("custom-controls", {
+      init: function () {
+        // Define camera movement limits
+        var minHeight = 1.6;
+        var maxHeight = 5;
+
+        // Initialize variables
+        var isMovingUp = false;
+        var isMovingDown = false;
+
+        var cameraEl = this.el;
+        var currentPosition = cameraEl.getAttribute("position");
+
+        // Keydown event listener for 'z' key
+        window.addEventListener("keydown", function (event) {
+          if (event.key === "z") {
+            if (currentPosition.y < maxHeight) {
+              cameraEl.setAttribute("position", {
+                x: currentPosition.x,
+                y: currentPosition.y + 0.1,
+                z: currentPosition.z,
+              });
+            }
+          }
+        });
+
+        // Keyup event listener for 'z' key
+        window.addEventListener("keyup", function (event) {
+          if (event.key === "z") {
+            isMovingUp = false;
+          }
+        });
+
+        // Keydown event listener for 'x' key
+        window.addEventListener("keydown", function (event) {
+          if (event.key === "x") {
+            if (currentPosition.y > minHeight) {
+              cameraEl.setAttribute("position", {
+                x: currentPosition.x,
+                y: currentPosition.y - 0.1,
+                z: currentPosition.z,
+              });
+            }
+          }
+        });
+
+        // Keyup event listener for 'x' key
+        window.addEventListener("keyup", function (event) {
+          if (event.key === "x") {
+            isMovingDown = false;
+          }
+        });
+      },
+    });
   }, []);
 
   const [musicControls, setMusicControls] = useState(false);
@@ -147,6 +201,7 @@ function MuseumTour() {
           position="0 1.6 10"
           rotation="0 90 0"
           wasd-controls="acceleration: 40"
+          custom-controls
         >
           <a-cursor material="color: red; shader: flat"></a-cursor>
         </a-camera>
